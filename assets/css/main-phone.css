@@ -1,0 +1,3713 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap');
+
+@font-face {
+   font-family: "kiona";
+   src: url(../font/kiona.ttf);
+}
+
+@font-face {
+   font-family: "yes";
+   src: url(../font/yes.ttf);
+}
+
+html, body {
+position: relative;
+margin: 0vw;
+padding: 0vw;
+width: 100%;
+height: 100%;
+background-color: #000101;
+font-family: "Roboto", sans-serif;
+scroll-behavior: smooth;
+}
+
+
+main {
+display: block;
+position: relative;
+margin: 0vw;
+padding: 0vw;
+width: 100%;
+height: 100%;
+}
+
+::selection {
+background-color: #a69672; 
+color: #e6e6e6;  
+}
+
+
+/* Chrome, Safari */
+::-webkit-selection {
+background-color: #a69672;
+color: #e6e6e6;  
+}
+
+
+/* Mozzila */
+::-moz-selection {
+background-color: #a69672;
+color: #e6e6e6;  
+}
+
+/* Opera */
+::-o-selection {
+background-color: #a69672;
+color: #e6e6e6;     
+}
+
+/* IE */
+::ms-selection {
+background-color: #a69672;
+color: #e6e6e6;  
+}
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 0.5vw;
+    background-color: #e3e3e3;
+
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	/*
+    box-shadow: inset 0 0 5px grey; 
+    z-index: 2;
+    */
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #1d1d1d;
+    border-radius: 2vw;
+    z-index: 2;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #928864; 
+    z-index: 2;
+    transition: 0.3s;
+}
+
+
+#zollo-ws {
+padding-right: 1vw;
+}
+
+.zollo-phone-wrap {
+display: none;
+}
+
+
+@media only screen and (min-width: 0px) and (max-width: 1024px) {
+
+
+.zollo-preload img {
+position: absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+width: 15vw;
+opacity: 0.9;
+}
+
+
+.zollo-phone-wrap {
+display: block;
+position: relative;
+margin: 0vw;
+padding: 0vw;
+width: 100%;
+height: 100%;
+}
+
+
+#zollo-phone-nav {
+z-index: 10;
+position: absolute;
+left: 0vw;
+top: 0vw;
+width: 100%;
+height: 11vw;
+background-color: #393939;
+display: grid;
+justify-content: center;
+grid-template-columns: 15% 30% 55%;
+grid-gap: 0vw 0vw;
+}
+
+.zollo-phone-nav-item-brand {
+background-color: none;
+height: 11vw;
+display: flex;
+justify-content: flex-end;
+align-items: center;
+}
+
+.zollo-phone-nav-item-brand img {
+margin-right: 3vw;
+padding: 0vw;
+display: block;
+width: 6vw;
+}
+
+.zollo-phone-nav-item-brand-text {
+background-color: none;
+height: 11vw;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.zollo-phone-nav-item-brand-text h1 {
+font-weight: normal;
+font-family: "kiona";
+font-size: 4vw;
+color: var(--main-white-color);
+margin: 0vw;
+padding: 0vw;
+}
+
+.zollo-phone-nav-item-hamburger {
+background-color: none;
+height: 11vw;
+display: flex;
+justify-content: center;
+align-items: flex-end;
+flex-direction: column;
+}
+
+.zollo-phone-nav-item-hamburger-content {
+position: relative;
+cursor: pointer;
+margin-right: 6vw;
+
+}
+
+.zollo-phone-nav-item-hamburger-a, .zollo-phone-nav-item-hamburger-b, .zollo-phone-nav-item-hamburger-c {
+width: 6vw;
+height: 0.8vw;
+border-radius: 0.2vw;
+margin: 1vw 0vw;
+background-color: var(--main-white-color);
+transition: 0.3s;
+}
+
+.zollo-phone-nav-item-hamburger-change .zollo-phone-nav-item-hamburger-b {
+opacity: 0;
+}
+
+.zollo-phone-nav-item-hamburger-change .zollo-phone-nav-item-hamburger-a {
+transform: rotate(-45deg) translate(-1vw, 1vw); 
+}
+
+
+.zollo-phone-nav-item-hamburger-change .zollo-phone-nav-item-hamburger-c {
+transform: rotate(45deg) translate(-1.5vw, -1.5vw);
+}
+
+/* ZOLLO PHONE NAV OVERLAY */
+
+.zollo-phone-nav-overlay {
+overflow: hidden;
+z-index: 1000;
+position: fixed;
+left: 0vw;
+top: 0vw;
+width: 0%; 
+min-height: 50%;
+height: 100%;
+background-color: #393939;
+transition: 0.5s cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+
+#zollo-phone-nav-overlay-content {
+z-index: 10;
+position: absolute;
+left: 0vw;
+top: 0vw;
+width: 100%;
+height: 11vw;
+background-color: none;
+display: grid;
+justify-content: center;
+grid-template-columns: 15% 30% 55%;
+grid-gap: 0vw 0vw;
+}
+
+.zollo-phone-nav-overlay-item-brand {
+background-color: none;
+height: 11vw;
+display: flex;
+justify-content: flex-end;
+align-items: center;
+}
+
+.zollo-phone-nav-overlay-item-brand img {
+margin-right: 3vw;
+padding: 0vw;
+display: block;
+width: 6vw;
+}
+
+.zollo-phone-nav-overlay-item-brand-text {
+background-color: none;
+height: 11vw;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.zollo-phone-nav-overlay-item-brand-text p {
+white-space: nowrap;
+font-family: "kiona";
+font-size: 4vw;
+color: var(--main-white-color);
+margin: 0vw;
+padding: 0vw;
+}
+
+.zollo-phone-nav-overlay-item-hamburger {
+background-color: none;
+height: 11vw;
+display: flex;
+justify-content: center;
+align-items: flex-end;
+flex-direction: column;
+}
+
+.zollo-phone-nav-overlay-item-hamburger-content {
+position: relative;
+cursor: pointer;
+margin-right: 6vw;
+width: 6vw;
+height: 6vw;
+background-color: none;
+}
+
+.zollo-phone-nav-overlay-item-hamburger-a, .zollo-phone-nav-overlay-item-hamburger-b, .zollo-phone-nav-overlay-item-hamburger-c {
+width: 6vw;
+height: 0.8vw;
+border-radius: 0.2vw;
+margin: 1vw 0vw;
+background-color: var(--main-white-color);
+transition: 0.3s;
+}
+
+.zollo-phone-nav-overlay-item-hamburger-change .zollo-phone-nav-overlay-item-hamburger-b {
+opacity: 0;
+}
+
+.zollo-phone-nav-overlay-item-hamburger-change .zollo-phone-nav-overlay-item-hamburger-a {
+transform: rotate(-45deg) translate(-1vw, 1vw); 
+}
+
+
+.zollo-phone-nav-overlay-item-hamburger-change .zollo-phone-nav-overlay-item-hamburger-c {
+transform: rotate(45deg) translate(-1.5vw, -1.5vw);
+}
+
+
+
+.zollo-phone-nav-overlay-links {
+margin-top: 11vw;
+position: relative;
+width: 100%;
+height: 89%;
+background-color: none;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+
+.zollo-phone-nav-overlay-links-item {
+background-color: none;
+position: relative;
+margin-bottom: 6vw;
+}
+
+.zollo-phone-nav-overlay-links-item a {
+text-transform: uppercase;
+position: relative;
+z-index: 2;
+font-weight: 800;
+white-space: nowrap;
+color: var(--main-white-color);
+text-decoration: none;
+font-size: 6vw;
+font-family: "Roboto", sans-serif;
+} 
+
+
+.zollo-phone-nav-overlay-links-sep {
+visibility: hidden;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.zollo-phone-nav-overlay-links-item-sep {
+background-color: none;
+position: relative;
+margin-bottom: 4vw;
+}
+
+.zollo-phone-nav-overlay-links-item-sep a {
+
+text-align: center;
+position: relative;
+z-index: 2;
+font-weight: 400;
+white-space: nowrap;
+color: #c1c1c1;
+text-decoration: none;
+font-size: 4vw;
+font-family: "Roboto", sans-serif;
+} 
+
+
+.zollo-phone-social-media-wrap {
+z-index: 3;
+position: absolute;
+bottom: 0vw;
+width: 100%;
+height: 25vw;
+background-color: #393939;
+display: grid;
+grid-template-columns: 5vw 5vw 5vw;
+justify-content: center;
+grid-gap: 0vw 5vw;
+}
+
+
+.zollo-phone-social-media-wrap-item {
+background-color: none;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.zollo-phone-social-media-wrap-item a {
+display: block;
+color: var(--main-white-color);
+text-decoration: none;
+}
+
+.zollo-phone-social-media-wrap-item span {
+margin: 0vw;
+padding: 0vw;
+display: block;
+font-size: 4vw;
+}
+
+
+
+/*
+.zollo-phone-nav-overlay-links-item-a-line {
+margin-top: -2.5vw;
+position: absolute;
+width: 23vw;
+height: 1.5vw;
+background-color: var(--main-gold-color);
+}
+
+.zollo-phone-nav-overlay-links-item-b-line {
+margin-top: -2.5vw;
+position: absolute;
+width: 39vw;
+height: 1.5vw;
+background-color: var(--main-gold-color);
+}
+
+.zollo-phone-nav-overlay-links-item-c-line {
+margin-top: -2.5vw;
+position: absolute;
+width: 21vw;
+height: 1.5vw;
+background-color: var(--main-gold-color);
+}
+
+.zollo-phone-nav-overlay-links-item-d-line {
+margin-top: -2.5vw;
+position: absolute;
+width: 19vw;
+height: 1.5vw;
+background-color:var(--main-gold-color);
+}
+
+.zollo-phone-nav-overlay-links-item-e-line {
+margin-top: -2.5vw;
+position: absolute;
+width: 13vw;
+height: 1.5vw;
+background-color: var(--main-gold-color);
+}
+*/
+
+/* ZOLLO PHONE END NAV OVERLAY */
+
+
+/* ZOLLO PHONE THEME */
+
+#zollo-phone-theme {
+margin-top: 0vw;
+position: relative;
+left: 0vw;
+top: 0vw;
+width: 100%;
+min-height: 100%;
+background-color: gray;
+/*
+background-image: url('../img/bg/phone-theme.png');
+*/
+background-size: cover;
+background-position: center center;
+
+}
+
+.zollo-phone-theme-container {
+margin-top: 11vw;
+position: absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+width: 100%;
+height: 100vw;
+background-color: none;
+display: flex;
+flex-direction: column;
+}
+
+
+
+.zollo-phone-theme-container-a {
+position: relative;
+left: -1vw;
+transform: scale(0.9);
+width: 100%;
+height: 26%;
+background-color: none;
+}
+
+/*
+.zollo-phone-theme-container-a span:nth-of-type(1) {
+color: #5e5641;
+font-size: 19vw;
+font-family: "yes";
+position: absolute;
+top: 1vw;
+left: 2vw;
+transform: rotate(-10deg);
+margin: 0vw;
+padding: 0vw;
+display: block;
+}
+*/
+
+.zollo-phone-theme-container-a p {
+margin: 0vw;
+padding: 0vw;
+}
+
+.zollo-phone-theme-container-a img {
+opacity: 0;
+pointer-events: none;
+position: absolute;
+top: 1vw;
+left: 2vw;
+transform: rotate(-10deg);
+margin: 0vw;
+padding: 0vw;
+width: 45vw;
+}
+
+.zollo-phone-theme-container-a-yes {
+opacity: 0;
+color: #5e5641;
+font-size: 19vw;
+font-family: "yes";
+position: absolute;
+top: 1vw;
+left: 2vw;
+transform: rotate(-10deg);
+margin: 0vw;
+padding: 0vw;
+}
+
+
+.zollo-phone-theme-container-a-yes-anim {
+animation-name: zollo-phone-yes;
+animation-duration: 1s;
+animation-timing-function: ease-in-out;
+animation-fill-mode: forwards;
+}
+
+@keyframes zollo-phone-yes {
+0% {opacity: 0;}
+100% {opacity: 1;}
+}
+
+
+#zollo-phone-a-wrap {
+position: absolute;
+left: 35%;
+display: flex;
+flex-direction: row;
+background-color: none;
+height: 20vw;
+}
+
+
+
+#zollo-phone-a-wrap p {
+margin: 0vw;
+padding: 0vw;
+z-index: 10;
+white-space: nowrap;
+color: var(--main-white-color);
+font-size: 15vw;
+font-family: "kiona";
+}
+
+#zollo-phone-a-wrap span {
+display: block;
+align-self: center;
+margin-left: 0.5vw;
+margin-top: 0vw;
+width: 0.4vw;
+height:12.5vw;
+background-color: var(--main-white-color);
+animation-name: zollo-wa;
+animation-duration: 0.5s;
+animation-iteration-count: infinite;
+animation-direction: alternate;
+}
+
+@keyframes zollo-wa {
+0% {opacity: 1;}
+100% {opacity: 0;}
+}
+
+#zollo-phone-a-wrap2 {
+position: absolute;
+top: 60%;
+left: 13%;
+display: flex;
+flex-direction: row;
+background-color: none;
+height: 10vw;
+}
+
+
+#zollo-phone-a-wrap2 p:nth-of-type(1) {
+padding-right: 2vw;
+position: relative;
+top: 3vw;
+bottom: 0vw;
+color: var(--main-white-color);
+font-size: 6vw;
+font-weight: 600;
+font-family: "Roboto", sans-serif;
+}
+
+#zollo-phone-a-wrap2 p:nth-of-type(2) {
+white-space: nowrap;
+position: relative;
+bottom: 0vw;
+color: var(--main-white-color);
+font-size: 9vw;
+font-family: "kiona";
+}
+
+#zollo-phone-a-wrap2 span:nth-of-type(1) {
+display: block;
+align-self: center;
+margin-left: -2vw;
+margin-top: 0vw;
+width: 0.4vw;
+height:10vw;
+background-color: var(--main-white-color);
+animation-name: zollo-a-one;
+animation-duration: 0.5s;
+animation-iteration-count: infinite;
+animation-direction: alternate;
+}
+
+@keyframes zollo-a-one {
+0% {opacity: 1;}
+100% {opacity: 0;}
+}
+
+#zollo-phone-a-wrap2 span:nth-of-type(2) {
+display: block;
+align-self: center;
+margin-left: 0.5vw;
+margin-top: 0vw;
+width: 0.4vw;
+height:10vw;
+background-color: var(--main-white-color);
+animation-name: zollo-a-two;
+animation-duration: 0.5s;
+animation-iteration-count: infinite;
+animation-direction: alternate;
+}
+
+@keyframes zollo-a-two {
+0% {opacity: 1;}
+100% {opacity: 0;}
+}
+
+
+/*.zollo-phone-theme-container-a p:nth-of-type(1) {
+z-index: 10;
+white-space: nowrap;
+position: absolute;
+left: 50%;
+transform: translateX(-30%);
+color: var(--main-white-color);
+font-size: 15vw;
+font-family: "kiona";
+}
+
+.zollo-phone-theme-container-a p:nth-of-type(2) {
+position: absolute;
+left: 13vw;
+bottom: 0vw;
+color: var(--main-white-color);
+font-size: 6vw;
+font-weight: 600;
+font-family: "Roboto", sans-serif;
+}
+
+.zollo-phone-theme-container-a p:nth-of-type(3) {
+white-space: nowrap;
+position: absolute;
+left: 50%;
+transform: translateX(-25%);
+bottom: 0vw;
+color: var(--main-white-color);
+font-size: 9vw;
+font-family: "kiona";
+}
+*/
+
+.zollo-phone-theme-container-a strong {
+transition: 0.5s ease-in-out;
+color: var(--main-white-color);
+-webkit-text-stroke: 0.2vw var(--main-white-color);
+}
+
+
+
+.zollo-phone-theme-container-b {
+position: relative;
+width: 100%;
+height: 40%;
+background-color: none;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.zollo-phone-theme-container-b-content {
+width: 80%;
+}
+
+.zollo-phone-theme-container-b p {
+text-align: center;
+color: var(--main-white-color);
+font-family: "Roboto", sans-serif;
+font-size: 4vw;
+font-weight: 100;
+line-height: 4.5vw;
+}
+
+.zollo-phone-theme-container-c {
+cursor: pointer;
+position: relative;
+width: 100%;
+height: 30%;
+background-color: none;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.zollo-phone-theme-container-c a{
+color: var(--main-white-color);
+text-decoration: none;
+font-size: 4.5vw;
+font-family: "kiona";
+background-color: var(--main-gold-color);
+padding: 3.5vw 20vw;
+border-radius: 10vw;
+}
+
+
+
+
+/* END ZOLLO PHONE THEME */
+
+/* ZOLLO PHONE PORTFOLIO */
+
+#zollo-phone-portfolio {
+position: relative;
+width: 100%;
+min-height: 200vw;
+background-color: var(--main-white-color);
+}
+
+
+.zollo-phone-portfolio-intro {
+position: relative;
+width: 100%;
+height: 25vw;
+background-color: none;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+
+.zollo-phone-portfolio-intro h2 {
+font-weight: 100;
+display: block;
+position: relative;
+margin: 0vw;
+margin-top: 2vw;
+padding: 0vw;
+font-size: 9vw;
+font-family: "Roboto", sans-serif;
+}
+
+
+.zollo-phone-portfolio-intro-dot {
+position: absolute;
+left: 52vw;
+bottom: 0vw;
+width: 2vw;
+height: 2vw;
+background-color: var(--main-gold-color);
+}
+
+.zollo-phone-portfolio-intro-content {
+width: 55%;
+height: 10vw;
+background-color: none;
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+
+
+.zollo-phone-portfolio-row-a {
+position: relative;
+width: 100%;
+height: 60vw;
+background-color: silver;
+display: flex;
+}
+
+.zollo-phone-portfolio-row-a-1 {
+position: relative;
+width: 12%;
+background-color: var(--main-gold-color);
+height: 65vw;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.zollo-phone-portfolio-row-a-1 h2 {
+font-weight: normal;
+font-family: "kiona";
+white-space: nowrap;
+margin: 0vw;
+padding: 0vw;
+font-size: 7.5vw;
+transform: rotate(-90deg);
+}
+
+.zollo-phone-portfolio-row-a-2 {
+position: relative;
+width: 60%;
+background-color: #393939;
+background-image: url(../img/portfolio/workoutland.png);
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center center;
+height: auto;
+}
+
+.zollo-phone-portfolio-row-a-2-content-wrap {
+background-color: none;
+height: 100%;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: flex-end;
+}
+
+.zollo-phone-portfolio-row-a-2-content {
+margin-bottom: 10vw;
+margin-left: 0vw;
+width: auto;
+background-color: none;
+}
+
+.zollo-phone-portfolio-row-a-2-num {
+position: absolute;
+left: 5vw;
+top: 2vw;
+}
+
+.zollo-phone-portfolio-row-a-2-num p {
+margin: 0vw;
+padding: 0vw;
+font-size: 8vw;
+font-family: "kiona";
+font-style: italic;
+color: var(--main-white-color);
+}
+
+.zollo-phone-portfolio-row-a-2-content p {
+display: block;
+text-align: left;
+word-wrap: break-word;
+white-space: pre;
+font-family: "Roboto", sans-serif;
+font-weight: 100;
+font-size: 4vw;
+margin: 0vw;
+padding: 0vw;
+color: var(--main-white-color);
+
+}
+
+
+.zollo-phone-portfolio-row-a-3 {
+position: relative;
+width: 28%;
+background-image: url(../img/portfolio/xshoes.png);
+background-repeat: no-repeat;
+background-size: cover;
+background-position: -5vw center;
+background-color: gray;
+height: 60vw;
+}
+
+.zollo-phone-portfolio-row-a-3 {
+
+}
+
+.zollo-phone-portfolio-row-a-3-num {
+position: absolute;
+left: 2vw;
+top: 2vw;    
+}
+
+.zollo-phone-portfolio-row-a-3-num p {
+margin: 0vw;
+padding: 0vw;
+font-size: 8vw;
+font-family: "kiona";
+font-style: italic;
+color: var(--main-white-color);
+}
+
+.zollo-phone-portfolio-row-b-2-content-wrap {
+position: absolute;
+background-color: none;
+height: auto;
+bottom: 10vw;
+}
+
+.zollo-phone-portfolio-row-b-2-content {
+margin-left: -7vw;
+width: auto;
+}
+
+.zollo-phone-portfolio-row-b-2-content p {
+display: block;
+text-align: left;
+word-wrap: break-word;
+white-space: pre;
+font-family: "Roboto", sans-serif;
+font-weight: 100;
+font-size: 4vw;
+margin: 0vw;
+padding: 0vw;
+color: var(--main-white-color);
+}
+
+
+.zollo-phone-portfolio-row-b {
+position: relative;
+width: 100%;
+height: 65vw;
+background-color: #393939;
+display: flex;
+}
+
+.zollo-phone-portfolio-row-b-1 {
+position: relative;
+width: 65%;
+background-color: #393939;
+background-image: url(../img/portfolio/sphere.png);
+background-repeat: no-repeat;
+background-size: 105vw 100%;
+background-position: -35vw center;
+height: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.zollo-phone-portfolio-row-b-1-num {
+position: absolute;
+left: 5vw;
+top: 2vw;
+}
+
+.zollo-phone-portfolio-row-b-1-num p {
+margin: 0vw;
+padding: 0vw;
+font-size: 8vw;
+font-family: "kiona";
+font-style: italic;
+color: var(--main-white-color);
+}
+
+.zollo-phone-portfolio-row-b-2 {
+position: relative;
+width: 35%;
+background-color: var(--main-gold-color);
+height: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.zollo-phone-portfolio-row-b-2 h2 {
+font-weight: normal;
+text-align: center;
+font-size: 7vw;
+transform: rotate(-90deg);
+font-family: "kiona";
+}
+
+.zollo-phone-portfolio-row-c {
+position: relative;
+width: 100%;
+height: 60vw;
+background-color: #393939;
+display: flex;
+}
+
+.zollo-phone-portfolio-row-c-1 {
+position: relative;
+width: 32%;
+background-color: var(--main-gold-color);
+height: 60vw;
+display: flex;
+justify-content: center;
+align-items: center;    
+}
+
+.zollo-phone-portfolio-row-c-1 h2 {
+font-weight: normal;
+text-align: center;
+font-size: 7vw;
+transform: rotate(-90deg);
+font-family: "kiona";
+}
+
+.zollo-phone-portfolio-row-c-2 {
+position: relative;
+width: 50%;
+background-image: url(../img/portfolio/fuck-up.png);
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center center;
+height: 60vw;
+display: flex;
+justify-content: center;
+align-items: center;    
+}
+
+.zollo-phone-portfolio-row-c-3 {
+position: relative;
+width: 18%;
+background-image: url(../img/portfolio/katalog.png);
+background-repeat: no-repeat;
+background-size: cover;
+background-position: 0vw center;
+height: 60vw;
+display: flex;
+justify-content: center;
+align-items: center;    
+}
+
+
+.zollo-phone-portfolio-row-c-2-num {
+position: absolute;
+left: 1vw;
+top: 2vw;
+}
+
+.zollo-phone-portfolio-row-c-2-num p {
+margin: 0vw;
+padding: 0vw;
+font-size: 8vw;
+font-family: "kiona";
+font-style: italic;
+color: var(--main-white-color);
+}
+
+.zollo-phone-portfolio-row-d {
+position: relative;
+width: 100%;
+height: 90vw;
+background-color: #393939;
+display: flex;
+}
+
+.zollo-phone-portfolio-row-d-1 {
+position: relative;
+width: 70%;
+background-image: url(../img/portfolio/zolll.png);
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center center;
+height: auto;
+display: flex;
+justify-content: center;
+align-items: center;    
+}
+
+.zollo-phone-portfolio-row-d-2 {
+position: relative;
+width: 30%;
+background-color: var(--main-gold-color); 
+height: auto;
+display: flex;
+justify-content: center;
+align-items: flex-start;    
+}
+
+.zollo-phone-portfolio-row-d-2 img {
+padding-top: 9vw;
+display: block;
+margin: 0 auto;
+width: 18vw;
+
+}
+
+.zollo-phone-portfolio-row-d-1-content-wrap {
+width: 100%;
+background-color: none;
+display: flex;
+justify-content: center;
+}
+
+.zollo-phone-portfolio-row-d-1-content {
+width: auto;
+background-color: none;
+}
+
+.zollo-phone-portfolio-row-d-1-content img {
+display: block;
+margin: 0 auto;
+width: 18vw;
+padding-bottom: 5vw;
+}
+
+
+.zollo-phone-portfolio-row-d-1-content p {
+display: block;
+text-align: justify;
+word-wrap: break-word;
+white-space: pre;
+
+font-family: "Roboto", sans-serif;
+font-weight: 100;
+font-size: 4vw;
+margin-left: -8.5vw;
+padding: 0vw;
+color: var(--main-white-color);
+}
+
+
+#zollo-phone-slider-klienti {
+position: relative;
+width: 100%;
+min-height: 75vw;
+background-color: var(--main-white-color);
+}
+
+
+
+.zollo-phone-slider-klienti-desc {
+z-index: 10;
+position: absolute;
+left: 50%;
+top: 10vw;
+height: 13.5vw;
+transform: translateX(-50%) scale(1.2);
+background-color: none;
+
+}
+
+.zollo-phone-slider-klienti-desc strong {
+font-weight: 300; 
+}
+
+.zollo-phone-slider-klienti-desc span {
+font-weight: 100;
+font-family: "Roboto", sans-serif;
+font-size: 6vw;
+display: block;
+margin: 0vw;
+padding: 0vw;
+color: block;
+}
+
+.zollo-phone-slider-klienti-desc p {
+font-weight: 100;
+text-align: center;
+font-family: "Roboto", sans-serif;
+font-size: 6vw; 
+display: block;
+margin: 0vw;
+margin-top: 0vw;
+padding: 0vw;
+color: block;
+}
+
+.zollo-phone-slider-klienti-desc-dot {
+position: absolute;
+left: 85%;
+bottom: 0.25vw;
+width: 1.5vw;
+height: 1.5vw;
+background-color: var(--main-gold-color);
+}
+
+/*
+#zollo-phone-nasi-klienti {
+position: relative;
+width: 100%;
+min-height: 65vw;
+background-color: pink;
+}
+*/
+
+
+/* SWIP */
+
+.zollo-phone-slider-klienti {
+cursor: grabbing;
+width: 100%;
+height: 120vw;
+margin-left: auto;
+margin-right: auto;
+position: relative;
+overflow: hidden;
+list-style: none;
+padding: 0;
+/* Fix of Webkit flickering */
+z-index: 1;
+}
+
+.swiper-slide {
+text-align: center;
+background: #e3e3e3;
+display: -webkit-box;
+display: -ms-flexbox;
+display: -webkit-flex;
+display: flex;
+-webkit-box-pack: center;
+-ms-flex-pack: center;
+-webkit-justify-content: center;
+justify-content: center;
+-webkit-box-align: center;
+-ms-flex-align: center;
+-webkit-align-items: center;
+align-items: center;
+
+}
+
+
+.zollo-phone-slider-klienti-container {
+position: relative;
+width: 100%;
+top: 0vw;
+height: 80vw;
+background-color: none;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.zollo-phone-slider-klienti-container-a {
+position: relative;
+margin-top: -8vw;
+width: 100%;
+height: 20vw;
+background-color: none;
+text-align: center;
+display: flex;
+justify-content: center;
+}
+
+
+.zollo-phone-slider-klienti-container-a-content {
+position: relative;
+}
+
+.zollo-phone-slider-klienti-container-a span {
+font-family: "kiona";
+font-size: 6vw;
+display: block;
+margin: 0vw;
+padding: 0vw;
+color: block;
+}
+
+.zollo-phone-slider-klienti-container-a p {
+font-family: "kiona";
+font-size: 6vw; 
+display: block;
+margin: 0vw;
+padding: 0vw;
+color: block;
+}
+
+.zollo-phone-slider-klienti-container-a-dot {
+position: absolute;
+margin-left: 35vw;
+margin-top: -2.2vw;
+width: 1.2vw;
+height: 1.2vw;
+background-color: var(--main-gold-color);
+}
+
+.zollo-phone-slider-klienti-container-b {
+width: 100%;
+height: 40vw;
+background-color: none;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.zollo-phone-slider-klienti-container-b-1 {
+width: 100%;
+min-height: 5vw;
+background-color: none;
+margin-bottom: 7vw;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.zollo-phone-slider-klienti-container-b-1 img {
+width: 45vw;
+display: block;
+}
+
+.zollo-phone-slider-klienti-container-b-2 {
+margin-top: 15vw;
+width: 80%;
+min-height: 3vw;
+background-color: none;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.zollo-phone-slider-klienti-container-b-2 p { 
+text-align: center;
+margin: 0vw;
+padding: 0vw;
+font-family: "Roboto", sans-serif;
+font-size: 4vw;
+word-spacing: 0.1vw;
+font-weight: 300;
+font-style: italic;
+}
+
+
+.zollo-phone-digitalni-sluzby {
+position: relative;
+width: 100%;
+height: 265vw;
+background-color: #383838;
+background-image: url('../img/bg/digitalni-nabidka-pozadi.png');
+background-size: cover;
+background-position: center center;
+}
+
+
+.zollo-phone-digitalni-sluzby-slider {
+cursor: grabbing;
+width: 100%;
+height: 180vw;
+margin-left: auto;
+margin-right: auto;
+position: absolute;
+bottom: 10vw;
+overflow: hidden;
+list-style: none;
+padding: 0;
+/* Fix of Webkit flickering */
+z-index: 1;
+background-color: none;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+
+
+/* END SWIP */
+
+/* ZOLLO PHONE TEMPLATES */
+
+.zollo-phone-digitalni-sluzby-theme {
+position: absolute;
+top: 10vw;
+left: 50%;
+transform: translate(-50%);    
+width: 90%;
+min-height: 55vw;
+background-color: none;
+display: flex;
+justify-content: flex-start;
+flex-direction: column;
+}
+
+.zollo-phone-digitalni-sluzby-theme-a {
+position: relative;
+width: 100%;
+height: 23vw;
+margin-bottom: 10vw;
+background-color: none;
+}
+
+.zollo-phone-digitalni-sluzby-theme-a span {
+font-weight: 100;
+color: var(--main-white-color);
+margin: 0vw;
+padding: 0vw;
+display: block;
+text-align: center;
+font-family: "Roboto", sans-serif;
+font-size: 8vw;
+}
+
+/*
+.zollo-phone-digitalni-sluzby-theme-a p {
+margin-top: 0vw;
+color: var(--main-white-color);
+padding: 0vw;
+display: block;
+text-align: center;
+font-family: "Roboto", sans-serif;
+font-size: 12vw;
+}
+*/
+
+.zollo-phone-digitalni-sluzby-theme-a-dot {
+opacity: 0;
+position: absolute;
+left: 70vw;
+bottom: -0.5vw;
+width: 2.5vw;
+height: 2.5vw;
+background-color: var(--main-gold-color);
+}
+
+.zollo-phone-digitalni-sluzby-theme-a-dot-anim {
+animation-name: zollo-phone-ds-dot;
+animation-duration: 0.5s;
+animation-timing-function: ease-in-out;
+animation-fill-mode: forwards;
+}
+
+@keyframes zollo-phone-ds-dot {
+0% {opacity: 0;}
+100% {opacity: 1;}
+}
+
+
+#zollo-phone-digitalni-wrap {
+display: flex;
+flex-direction: row;  
+justify-content: center;
+background-color: none;
+height: 10vw;
+}
+
+
+
+#zollo-phone-digitalni-wrap p {
+font-weight: 100;
+color: var(--main-white-color);
+margin: 0vw;
+padding: 0vw;
+display: block;
+text-align: center;
+font-family: "Roboto", sans-serif;
+font-size: 8vw;
+}
+
+#zollo-phone-digitalni-wrap span {
+display: block;
+align-self: center;
+margin-left: 0.5vw;
+margin-top: 0vw;
+width: 0.4vw;
+height:9vw;
+background-color: var(--main-white-color);
+animation-name: zollo-phone-digitalni;
+animation-duration: 0.5s;
+animation-iteration-count: infinite;
+animation-direction: alternate;
+}
+
+
+@keyframes zollo-phone-digitalni {
+0% {opacity: 1;}
+100% {opacity: 0;}
+}
+
+
+#zollo-phone-digitalni-wrap2 {
+margin-top: 0.2vw;
+display: flex;
+flex-direction: row;
+justify-content: center;
+background-color: none;
+height: 14vw;
+}
+
+
+#zollo-phone-digitalni-wrap2 p {
+margin-top: 0vw;
+color: var(--main-white-color);
+padding: 0vw;
+display: block;
+text-align: center;
+font-family: "Roboto", sans-serif;
+font-size: 14vw;
+}
+
+#zollo-phone-digitalni-wrap2 span {
+display: block;
+align-self: center;
+margin-left: 1vw;
+margin-top: 0vw;
+width: 0.4vw;
+height:14vw;
+background-color: var(--main-white-color);
+animation-name: zollo-phone-sluzby;
+animation-duration: 0.5s;
+animation-iteration-count: infinite;
+animation-direction: alternate;
+}
+
+@keyframes zollo-phone-sluzby {
+0% {opacity: 1;}
+100% {opacity: 0;}
+}
+
+
+
+
+.zollo-phone-digitalni-sluzby-theme-b {
+position: relative;
+width: 100%;
+min-height: 25vw;
+background-color: none;
+text-align: center;
+}
+
+.zollo-phone-digitalni-sluzby-theme-b p {
+margin: 0vw;
+padding: 0vw;
+font-family: "Roboto", sans-serif;
+font-size: 4vw;
+color: var(--main-white-color);
+font-weight: 300;
+}
+
+/* PHONE TEMPLATE 01 */
+
+.zollo-phone-ds-phone-01 {
+z-index: 100;
+position: absolute;
+cursor: pointer;
+width: 60vw;
+height: 120vw;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%) scale(1.2);
+background-color: none;
+}
+
+
+.zollo-phone-ds-phone-01-template {
+
+}
+
+.zollo-phone-ds-phone-01-template img {
+position: absolute;
+width: 100%;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+-webkit-filter: drop-shadow(1.6vw 1.6vw 1.6vw rgba(0,0,0,0.5));
+}
+
+.zollo-phone-ds-phone-01-template-head {
+z-index: 1;
+position:absolute;
+top: -1vw;
+left: 50%;
+transform: translateX(-50%);
+width: 30vw;
+height: 5.8vw;
+background-color: white;
+border-bottom-left-radius: 2.8vw;
+border-bottom-right-radius: 2.8vw;
+}
+
+.zollo-phone-ds-phone-01-template-content {
+width: 89%;
+height: 113vw;
+border-radius: 5vw;
+position:absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);   
+background-color: none;
+background-image: url(../img/digitalni-sluzby/pozadi-1.png);
+background-size: 100% 113vw;
+background-repeat: no-repeat;
+background-position: center center;
+}
+
+
+.zollo-phone-ds-phone-01-template-content-inside {
+position: relative;
+border-radius: none;
+width: 100%;
+height: 113vw;
+background-color: none;
+display: flex;
+flex-direction: column;    
+}
+
+.zollo-phone-ds-phone-01-tc-inside-1 {
+width: 100%;
+height: 20%;
+/*background-color: rgba(36,255,0,0.2);*/
+background-color: none;
+}
+
+.zollo-phone-ds-phone-01-tc-inside-1 p {
+text-align: left !important;
+position: relative;
+top: 6vw;
+left: 4vw;
+font-weight: bold;
+margin: 0vw;
+padding: 0vw;
+font-size: 9vw;
+font-family: "kiona";
+color: var(--main-gold-color);
+
+}
+
+.zollo-phone-ds-phone-01-tc-inside-2 {
+width: 100%;
+height: 15%;
+background-color: none;
+display: flex;
+align-items: center;
+}
+
+.zollo-phone-ds-phone-01-tc-inside-2-center {
+margin-top: 0vw;
+margin-left: 4vw;
+}
+
+.zollo-phone-ds-phone-01-tc-inside-2 h2 { 
+color: var(--main-white-color);
+margin: 0vw;
+padding: 0vw;
+font-size: 4vw;
+font-weight: normal;
+font-family: "Roboto", sans-serif;
+font-weight: 100;
+
+}
+
+.zollo-phone-ds-phone-01-tc-inside-2-line {
+margin-top: 2vw;
+width: 12vw;
+height: 0.5vw; 
+background-color: var(--main-gold-color); 
+}
+
+.zollo-phone-ds-phone-01-tc-inside-3 {
+position: relative;
+width: 100%;
+height: 20%;
+background-color: none;
+}
+
+.zollo-phone-ds-phone-01-tc-inside-3-center {
+
+}
+
+.zollo-phone-ds-phone-01-tc-inside-3-center img {
+width: 16vw;
+display: block;
+position: absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -10%);
+
+}
+
+.zollo-phone-ds-phone-01-tc-inside-4 {
+width: 100%;
+height: 34%;
+background-color: none;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.zollo-phone-ds-phone-01-tc-inside-4-rows {
+background-color: none;
+width: 90%;
+min-height: 5vw;
+}
+
+
+.zollo-phone-ds-phone-01-tc-inside-4-rows-item:first-child {
+border-top-left-radius: 1.5vw;
+border-top-right-radius: 1.5vw;
+}
+
+.zollo-phone-ds-phone-01-tc-inside-4-rows-item:last-child {
+border-bottom-left-radius: 1.5vw;
+border-bottom-right-radius: 1.5vw;
+border-bottom: none;
+}
+
+.zollo-phone-ds-phone-01-tc-inside-4-rows-item {
+width: 100%;
+min-height: 2.5vw;
+background-color: rgba(0,0,0,0.5);
+box-sizing: border-box;
+padding: 2vw;
+padding-left: 1.5vw; 
+}
+
+.zollo-phone-ds-phone-01-tc-inside-4-rows-item span {
+display: block;
+text-align: left; 
+color: var(--main-gold-color);
+font-family: "Roboto", sans-serif;
+font-weight: normal;
+margin: 0vw;
+padding: 0vw;
+font-size: 2.5vw;
+}
+
+.zollo-phone-ds-phone-01-tc-inside-4-rows-item p {
+text-align: left;
+color: var(--main-white-color);
+font-family: "Roboto", sans-serif;
+font-weight: 300;
+margin: 0vw;
+padding-top: 1vw;
+font-size: 2vw;
+}
+
+.zollo-phone-ds-phone-01-tc-inside-4-rows hr {
+opacity: 0.1;
+margin: 0vw;
+padding: 0vw;
+display: block;
+border-top: 0.1vw solid gray;
+border-left: none;
+border-right: none;
+border-bottom: none;
+}
+
+.zollo-phone-ds-phone-01-tc-inside-5 {
+width: 100%;
+height: 15%;
+background-color: none;
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+
+
+.zollo-phone-ds-phone-01-tc-inside-5-center {
+
+}
+
+.zollo-phone-ds-phone-01-tc-inside-5-center a {
+border-radius: 5vw;
+font-family: "Roboto", sans-serif;
+font-weight: 100;
+padding: 2vw 6vw;
+border: 0.1vw solid var(--main-gold-color);
+color: var(--main-gold-color);
+text-decoration: none;
+font-size: 2.5vw;  
+}
+
+.zollo-phone-ds-phone-01-tc-inside-6 {
+width: 100%;
+height: 6%;
+background-color: none;
+display: flex;
+justify-content: flex-end;
+align-items: center;
+}
+
+.zollo-phone-ds-phone-01-tc-inside-6-center {
+
+}
+
+.zollo-phone-ds-phone-01-tc-inside-6-center img {
+opacity: 0.5;
+width: 3vw;
+display: block;
+margin-right: 4vw;
+}
+
+/* END PHONE TEMPLATE 01 */
+
+
+
+/* PHONE TEMPLATE 01 */
+
+.zollo-phone-ds-phone-02 {
+z-index: 100;
+position: absolute;
+cursor: pointer;
+width: 60vw;
+height: 120vw;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%) scale(1.2);
+background-color: none;
+}
+
+
+.zollo-phone-ds-phone-02-template {
+
+}
+
+.zollo-phone-ds-phone-02-template img {
+position: absolute;
+width: 100%;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+-webkit-filter: drop-shadow(1.6vw 1.6vw 1.6vw rgba(0,0,0,0.5));
+}
+
+.zollo-phone-ds-phone-02-template-head {
+z-index: 1;
+position:absolute;
+top: -1vw;
+left: 50%;
+transform: translateX(-50%);
+width: 30vw;
+height: 5.8vw;
+background-color: white;
+border-bottom-left-radius: 2.8vw;
+border-bottom-right-radius: 2.8vw;
+}
+
+.zollo-phone-ds-phone-02-template-content {
+width: 89%;
+height: 113vw;
+border-radius: 5vw;
+position:absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);   
+background-color: none;
+background-image: url(../img/digitalni-sluzby/pozadi-1.png);
+background-size: 100% 113vw;
+background-repeat: no-repeat;
+background-position: center center;
+}
+
+
+.zollo-phone-ds-phone-02-template-content-inside {
+position: relative;
+border-radius: none;
+width: 100%;
+height: 113vw;
+background-color: none;
+display: flex;
+flex-direction: column;    
+}
+
+.zollo-phone-ds-phone-02-tc-inside-1 {
+width: 100%;
+height: 15%;
+/*background-color: rgba(36,255,0,0.2);*/
+background-color: none;
+}
+
+.zollo-phone-ds-phone-02-tc-inside-1 p {
+text-align: left !important;
+position: relative;
+top: 6vw;
+left: 4vw;
+font-weight: bold;
+margin: 0vw;
+padding: 0vw;
+font-size: 9vw;
+font-family: "kiona";
+color: var(--main-gold-color);
+
+}
+
+.zollo-phone-ds-phone-02-tc-inside-2 {
+width: 100%;
+height: 20%;
+background-color: none;
+display: flex;
+align-items: center;
+}
+
+.zollo-phone-ds-phone-02-tc-inside-2-center {
+margin-top: -2vw;
+margin-left: 4vw;
+}
+
+.zollo-phone-ds-phone-02-tc-inside-2 h2 { 
+text-align: left;
+color: var(--main-white-color);
+margin: 0vw;
+padding: 0vw;
+font-size: 3.5vw;
+font-weight: normal;
+font-family: "Roboto", sans-serif;
+font-weight: 100;
+
+}
+
+.zollo-phone-ds-phone-02-tc-inside-2-line {
+margin-top: 2vw;
+width: 12vw;
+height: 0.5vw; 
+background-color: var(--main-gold-color); 
+}
+
+.zollo-phone-ds-phone-02-tc-inside-3 {
+width: 100%;
+height: 26%;
+position: relative;
+background-color: none;
+}
+
+.zollo-phone-ds-phone-02-tc-inside-3-center {
+
+}
+
+.zollo-phone-ds-phone-02-tc-inside-3-center img {
+width: 16vw;
+display: block;
+position: absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -30%);
+
+}
+
+.zollo-phone-ds-phone-02-tc-inside-4 {
+width: 100%;
+height: 34%;
+background-color: none;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.zollo-phone-ds-phone-02-tc-inside-4-rows {
+background-color: none;
+width: 90%;
+min-height: 5vw;
+}
+
+
+.zollo-phone-ds-phone-02-tc-inside-4-rows-item:first-child {
+border-top-left-radius: 1.5vw;
+border-top-right-radius: 1.5vw;
+}
+
+.zollo-phone-ds-phone-02-tc-inside-4-rows-item:last-child {
+border-bottom-left-radius: 1.5vw;
+border-bottom-right-radius: 1.5vw;
+border-bottom: none;
+}
+
+.zollo-phone-ds-phone-02-tc-inside-4-rows-item {
+width: 100%;
+min-height: 2.5vw;
+background-color: rgba(0,0,0,0.5);
+box-sizing: border-box;
+padding: 2vw;
+padding-left: 1.5vw; 
+}
+
+.zollo-phone-ds-phone-02-tc-inside-4-rows-item span {
+display: block;
+text-align: left;
+color: var(--main-gold-color);
+font-family: "Roboto", sans-serif;
+font-weight: normal;
+margin: 0vw;
+padding: 0vw;
+font-size: 2.5vw;
+}
+
+.zollo-phone-ds-phone-02-tc-inside-4-rows-item p {
+text-align: left;
+color: var(--main-white-color);
+font-family: "Roboto", sans-serif;
+font-weight: 300;
+margin: 0vw;
+padding-top: 1vw;
+font-size: 2vw;
+}
+
+.zollo-phone-ds-phone-02-tc-inside-4-rows hr {
+opacity: 0.1;
+margin: 0vw;
+padding: 0vw;
+display: block;
+border-top: 0.1vw solid gray;
+border-left: none;
+border-right: none;
+border-bottom: none;
+}
+
+.zollo-phone-ds-phone-02-tc-inside-5 {
+width: 100%;
+height: 15%;
+background-color: none;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+
+.zollo-phone-ds-phone-02-tc-inside-5-center {
+
+}
+
+.zollo-phone-ds-phone-02-tc-inside-5-center a {
+border-radius: 5vw;
+font-family: "Roboto", sans-serif;
+font-weight: 100;
+padding: 2vw 6vw;
+border: 0.1vw solid var(--main-gold-color);
+color: var(--main-gold-color);
+text-decoration: none;
+font-size: 2.5vw;  
+}
+
+.zollo-phone-ds-phone-02-tc-inside-6 {
+width: 100%;
+height: 6%;
+background-color: none;
+display: flex;
+justify-content: flex-end;
+align-items: center;
+}
+
+.zollo-phone-ds-phone-02-tc-inside-6-center {
+
+}
+
+.zollo-phone-ds-phone-02-tc-inside-6-center img {
+opacity: 0.5;
+width: 3vw;
+display: block;
+margin-right: 4vw;
+}
+
+/* END PHONE TEMPLATE 02 */
+
+
+/* PHONE TEMPLATE 03 */
+
+.zollo-phone-ds-phone-03 {
+z-index: 100;
+position: absolute;
+cursor: pointer;
+width: 60vw;
+height: 120vw;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%) scale(1.2);
+background-color: none;
+
+}
+
+
+.zollo-phone-ds-phone-03-template {
+
+}
+
+.zollo-phone-ds-phone-03-template img {
+position: absolute;
+width: 100%;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+-webkit-filter: drop-shadow(1.6vw 1.6vw 1.6vw rgba(0,0,0,0.5));
+}
+
+.zollo-phone-ds-phone-03-template-head {
+z-index: 1;
+position:absolute;
+top: -1vw;
+left: 50%;
+transform: translateX(-50%);
+width: 30vw;
+height: 5.8vw;
+background-color: white;
+border-bottom-left-radius: 2.8vw;
+border-bottom-right-radius: 2.8vw;
+}
+
+.zollo-phone-ds-phone-03-template-content {
+width: 89%;
+height: 113vw;
+border-radius: 5vw;
+position:absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);   
+background-color: none;
+background-image: url(../img/digitalni-sluzby/pozadi-1.png);
+background-size: 100% 113vw;
+background-repeat: no-repeat;
+background-position: center center;
+}
+
+
+.zollo-phone-ds-phone-03-template-content-inside {
+position: relative;
+border-radius: none;
+width: 100%;
+height: 113vw;
+background-color: none;
+display: flex;
+flex-direction: column;    
+}
+
+.zollo-phone-ds-phone-03-tc-inside-1 {
+width: 100%;
+height: 15%;
+/*background-color: rgba(36,255,0,0.2);*/
+background-color: none;
+}
+
+.zollo-phone-ds-phone-03-tc-inside-1 p {
+text-align: left !important;
+position: relative;
+top: 6vw;
+left: 4vw;
+font-weight: bold;
+margin: 0vw;
+padding: 0vw;
+font-size: 9vw;
+font-family: "kiona";
+color: var(--main-gold-color);
+
+}
+
+.zollo-phone-ds-phone-03-tc-inside-2 {
+width: 100%;
+height: 20%;
+background-color: none;
+display: flex;
+align-items: center;
+}
+
+.zollo-phone-ds-phone-03-tc-inside-2-center {
+margin-top: -2vw;
+margin-left: 4vw;
+}
+
+.zollo-phone-ds-phone-03-tc-inside-2 h2 { 
+text-align: left;
+color: var(--main-white-color);
+margin: 0vw;
+padding: 0vw;
+font-size: 3.5vw;
+font-weight: normal;
+font-family: "Roboto", sans-serif;
+font-weight: 100;
+
+}
+
+.zollo-phone-ds-phone-03-tc-inside-2-line {
+margin-top: 2vw;
+width: 12vw;
+height: 0.5vw; 
+background-color: var(--main-gold-color); 
+}
+
+.zollo-phone-ds-phone-03-tc-inside-3 {
+position: relative;
+width: 100%;
+height: 26%;
+background-color: none;
+
+
+}
+
+.zollo-phone-ds-phone-03-tc-inside-3-center {
+
+}
+
+.zollo-phone-ds-phone-03-tc-inside-3-center img {
+width: 12vw;
+display: block;
+position: absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -30%);
+
+}
+
+.zollo-phone-ds-phone-03-tc-inside-4 {
+width: 100%;
+height: 34%;
+background-color: none;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.zollo-phone-ds-phone-03-tc-inside-4-rows {
+background-color: none;
+width: 90%;
+min-height: 5vw;
+}
+
+
+.zollo-phone-ds-phone-03-tc-inside-4-rows-item:first-child {
+border-top-left-radius: 1.5vw;
+border-top-right-radius: 1.5vw;
+}
+
+.zollo-phone-ds-phone-03-tc-inside-4-rows-item:last-child {
+border-bottom-left-radius: 1.5vw;
+border-bottom-right-radius: 1.5vw;
+border-bottom: none;
+}
+
+.zollo-phone-ds-phone-03-tc-inside-4-rows-item {
+width: 100%;
+min-height: 2.5vw;
+background-color: rgba(0,0,0,0.5);
+box-sizing: border-box;
+padding: 2vw;
+padding-left: 1.5vw; 
+}
+
+.zollo-phone-ds-phone-03-tc-inside-4-rows-item span {
+display: block;
+text-align: left;
+color: var(--main-gold-color);
+font-family: "Roboto", sans-serif;
+font-weight: normal;
+margin: 0vw;
+padding: 0vw;
+font-size: 2.5vw;
+}
+
+.zollo-phone-ds-phone-03-tc-inside-4-rows-item p {
+text-align: left;
+color: var(--main-white-color);
+font-family: "Roboto", sans-serif;
+font-weight: 300;
+margin: 0vw;
+padding-top: 1vw;
+font-size: 2vw;
+}
+
+
+.zollo-phone-ds-phone-03-tc-inside-4-rows hr {
+opacity: 0.1;
+margin: 0vw;
+padding: 0vw;
+display: block;
+border-top: 0.2vw solid gray;
+border-left: none;
+border-right: none;
+border-bottom: none;
+}
+
+.zollo-phone-ds-phone-03-tc-inside-5 {
+width: 100%;
+height: 15%;
+background-color: none;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+
+.zollo-phone-ds-phone-03-tc-inside-5-center {
+
+}
+
+.zollo-phone-ds-phone-03-tc-inside-5-center a {
+border-radius: 5vw;
+font-family: "Roboto", sans-serif;
+font-weight: 100;
+padding: 2vw 6vw;
+border: 0.1vw solid var(--main-gold-color);
+color: var(--main-gold-color);
+text-decoration: none;
+font-size: 2.5vw;  
+}
+
+.zollo-phone-ds-phone-03-tc-inside-6 {
+width: 100%;
+height: 6%;
+background-color: none;
+display: flex;
+justify-content: flex-end;
+align-items: center;
+}
+
+.zollo-phone-ds-phone-03-tc-inside-6-center {
+
+}
+
+.zollo-phone-ds-phone-03-tc-inside-6-center img {
+opacity: 0.5;
+width: 3vw;
+display: block;
+margin-right: 4vw;
+}
+
+/* END PHONE TEMPLATE 03 */
+
+
+/* PHONE TEMPLATE 04 */
+
+.zollo-phone-ds-phone-04 {
+z-index: 100;
+position: absolute;
+cursor: pointer;
+width: 60vw;
+height: 120vw;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%) scale(1.2);
+background-color: none;
+
+}
+
+
+.zollo-phone-ds-phone-04-template {
+
+}
+
+.zollo-phone-ds-phone-04-template img {
+position: absolute;
+width: 100%;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+-webkit-filter: drop-shadow(1.6vw 1.6vw 1.6vw rgba(0,0,0,0.5));
+}
+
+.zollo-phone-ds-phone-04-template-head {
+z-index: 1;
+position:absolute;
+top: -1vw;
+left: 50%;
+transform: translateX(-50%);
+width: 30vw;
+height: 5.8vw;
+background-color: white;
+border-bottom-left-radius: 2.8vw;
+border-bottom-right-radius: 2.8vw;
+}
+
+.zollo-phone-ds-phone-04-template-content {
+width: 89%;
+height: 113vw;
+border-radius: 5vw;
+position:absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);   
+background-color: none;
+background-image: url(../img/digitalni-sluzby/pozadi-1.png);
+background-size: 100% 113vw;
+background-repeat: no-repeat;
+background-position: center center;
+}
+
+
+.zollo-phone-ds-phone-04-template-content-inside {
+position: relative;
+border-radius: none;
+width: 100%;
+height: 113vw;
+background-color: none;
+display: flex;
+flex-direction: column;    
+}
+
+.zollo-phone-ds-phone-04-tc-inside-1 {
+width: 100%;
+height: 15%;
+/*background-color: rgba(36,255,0,0.2);*/
+background-color: none;
+}
+
+.zollo-phone-ds-phone-04-tc-inside-1 p {
+text-align: left !important;
+position: relative;
+top: 6vw;
+left: 4vw;
+font-weight: bold;
+margin: 0vw;
+padding: 0vw;
+font-size: 9vw;
+font-family: "kiona";
+color: var(--main-gold-color);
+
+}
+
+.zollo-phone-ds-phone-04-tc-inside-2 {
+width: 100%;
+height: 20%;
+background-color: none;
+display: flex;
+align-items: center;
+}
+
+.zollo-phone-ds-phone-04-tc-inside-2-center {
+margin-top: -2vw;
+margin-left: 4vw;
+}
+
+.zollo-phone-ds-phone-04-tc-inside-2 h2 { 
+text-align: left;
+color: var(--main-white-color);
+margin: 0vw;
+padding: 0vw;
+font-size: 3.5vw;
+font-weight: normal;
+font-family: "Roboto", sans-serif;
+font-weight: 100;
+
+}
+
+.zollo-phone-ds-phone-04-tc-inside-2-line {
+margin-top: 2vw;
+width: 12vw;
+height: 0.5vw; 
+background-color: var(--main-gold-color); 
+}
+
+.zollo-phone-ds-phone-04-tc-inside-3 {
+width: 100%;
+height: 20%;
+background-color: none;
+position: relative;
+
+}
+
+.zollo-phone-ds-phone-04-tc-inside-3-center {
+
+}
+
+.zollo-phone-ds-phone-04-tc-inside-3-center img {
+width: 13vw;
+display: block;
+position: absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -30%);
+
+}
+
+.zollo-phone-ds-phone-04-tc-inside-4 {
+width: 100%;
+height: 34%;
+background-color: none;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.zollo-phone-ds-phone-04-tc-inside-4-rows {
+background-color: none;
+width: 90%;
+min-height: 5vw;
+}
+
+
+.zollo-phone-ds-phone-04-tc-inside-4-rows-item:first-child {
+border-top-left-radius: 1.5vw;
+border-top-right-radius: 1.5vw;
+}
+
+.zollo-phone-ds-phone-04-tc-inside-4-rows-item:last-child {
+border-bottom-left-radius: 1.5vw;
+border-bottom-right-radius: 1.5vw;
+border-bottom: none;
+}
+
+.zollo-phone-ds-phone-04-tc-inside-4-rows-item {
+width: 100%;
+min-height: 2.5vw;
+background-color: rgba(0,0,0,0.5);
+box-sizing: border-box;
+padding: 2vw;
+padding-left: 1.5vw; 
+}
+
+.zollo-phone-ds-phone-04-tc-inside-4-rows-item span {
+display: block;
+text-align: left;
+color: var(--main-gold-color);
+font-family: "Roboto", sans-serif;
+font-weight: normal;
+margin: 0vw;
+padding: 0vw;
+font-size: 2.5vw;
+}
+
+.zollo-phone-ds-phone-04-tc-inside-4-rows-item p {
+text-align: left;
+color: var(--main-white-color);
+font-family: "Roboto", sans-serif;
+font-weight: 300;
+margin: 0vw;
+padding-top: 1vw;
+font-size: 2vw;
+}
+
+.zollo-phone-ds-phone-04-tc-inside-4-rows hr {
+opacity: 0.1;
+margin: 0vw;
+padding: 0vw;
+display: block;
+border-top: 0.2vw solid gray;
+border-left: none;
+border-right: none;
+border-bottom: none;
+}
+
+.zollo-phone-ds-phone-04-tc-inside-5 {
+width: 100%;
+height: 15%;
+background-color: none;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+
+.zollo-phone-ds-phone-04-tc-inside-5-center {
+
+}
+
+.zollo-phone-ds-phone-04-tc-inside-5-center a {
+border-radius: 5vw;
+font-family: "Roboto", sans-serif;
+font-weight: 100;
+padding: 2vw 6vw;
+border: 0.1vw solid var(--main-gold-color);
+color: var(--main-gold-color);
+text-decoration: none;
+font-size: 2.5vw;  
+}
+
+.zollo-phone-ds-phone-04-tc-inside-6 {
+width: 100%;
+height: 6%;
+background-color: none;
+display: flex;
+justify-content: flex-end;
+align-items: center;
+}
+
+.zollo-phone-ds-phone-04-tc-inside-6-center {
+
+}
+
+.zollo-phone-ds-phone-04-tc-inside-6-center img {
+opacity: 0.5;
+width: 3vw;
+display: block;
+margin-right: 4vw;
+}
+
+/* END PHONE TEMPLATE 04 */
+
+
+/* PHONE TEMPLATE 05 */
+
+.zollo-phone-ds-phone-05 {
+z-index: 100;
+position: absolute;
+cursor: pointer;
+width: 60vw;
+height: 120vw;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%) scale(1.2);
+background-color: none;
+
+}
+
+
+.zollo-phone-ds-phone-05-template {
+
+}
+
+.zollo-phone-ds-phone-05-template img {
+position: absolute;
+width: 100%;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+-webkit-filter: drop-shadow(1.6vw 1.6vw 1.6vw rgba(0,0,0,0.5));
+}
+
+.zollo-phone-ds-phone-05-template-head {
+z-index: 1;
+position:absolute;
+top: -1vw;
+left: 50%;
+transform: translateX(-50%);
+width: 30vw;
+height: 5.8vw;
+background-color: white;
+border-bottom-left-radius: 2.8vw;
+border-bottom-right-radius: 2.8vw;
+}
+
+.zollo-phone-ds-phone-05-template-content {
+width: 89%;
+height: 113vw;
+border-radius: 5vw;
+position:absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);   
+background-color: none;
+background-image: url(../img/digitalni-sluzby/pozadi-1.png);
+background-size: 100% 113vw;
+background-repeat: no-repeat;
+background-position: center center;
+}
+
+
+.zollo-phone-ds-phone-05-template-content-inside {
+position: relative;
+border-radius: none;
+width: 100%;
+height: 113vw;
+background-color: none;
+display: flex;
+flex-direction: column;    
+}
+
+.zollo-phone-ds-phone-05-tc-inside-1 {
+width: 100%;
+height: 15%;
+/*background-color: rgba(36,255,0,0.2);*/
+background-color: none;
+}
+
+.zollo-phone-ds-phone-05-tc-inside-1 p {
+text-align: left !important;
+position: relative;
+top: 6vw;
+left: 4vw;
+font-weight: bold;
+margin: 0vw;
+padding: 0vw;
+font-size: 9vw;
+font-family: "kiona";
+color: var(--main-gold-color);
+
+}
+
+.zollo-phone-ds-phone-05-tc-inside-2 {
+width: 100%;
+height: 20%;
+background-color: none;
+display: flex;
+align-items: center;
+}
+
+.zollo-phone-ds-phone-05-tc-inside-2-center {
+margin-top: -2vw;
+margin-left: 4vw;
+}
+
+.zollo-phone-ds-phone-05-tc-inside-2 h2 { 
+text-align: left;
+color: var(--main-white-color);
+margin: 0vw;
+padding: 0vw;
+font-size: 3.5vw;
+font-weight: normal;
+font-family: "Roboto", sans-serif;
+font-weight: 100;
+
+}
+
+.zollo-phone-ds-phone-05-tc-inside-2-line {
+margin-top: 2vw;
+width: 12vw;
+height: 0.5vw; 
+background-color: var(--main-gold-color); 
+}
+
+.zollo-phone-ds-phone-05-tc-inside-3 {
+width: 100%;
+height: 20%;
+background-color: none;
+position: relative;
+
+}
+
+.zollo-phone-ds-phone-05-tc-inside-3-center {
+
+}
+
+.zollo-phone-ds-phone-05-tc-inside-3-center img {
+width: 18vw;
+display: block;
+position: absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -40%);
+
+}
+
+.zollo-phone-ds-phone-05-tc-inside-4 {
+width: 100%;
+height: 34%;
+background-color: none;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.zollo-phone-ds-phone-05-tc-inside-4-rows {
+background-color: none;
+width: 90%;
+min-height: 5vw;
+}
+
+
+.zollo-phone-ds-phone-05-tc-inside-4-rows-item:first-child {
+border-top-left-radius: 1.5vw;
+border-top-right-radius: 1.5vw;
+}
+
+.zollo-phone-ds-phone-05-tc-inside-4-rows-item:last-child {
+border-bottom-left-radius: 1.5vw;
+border-bottom-right-radius: 1.5vw;
+border-bottom: none;
+}
+
+.zollo-phone-ds-phone-05-tc-inside-4-rows-item {
+width: 100%;
+min-height: 2.5vw;
+background-color: rgba(0,0,0,0.5);
+box-sizing: border-box;
+padding: 2vw;
+padding-left: 1.5vw; 
+}
+
+.zollo-phone-ds-phone-05-tc-inside-4-rows-item span {
+display: block;
+text-align: left;
+color: var(--main-gold-color);
+font-family: "Roboto", sans-serif;
+font-weight: normal;
+margin: 0vw;
+padding: 0vw;
+font-size: 2.5vw;
+}
+
+.zollo-phone-ds-phone-05-tc-inside-4-rows-item p {
+text-align: left;
+color: var(--main-white-color);
+font-family: "Roboto", sans-serif;
+font-weight: 300;
+margin: 0vw;
+padding-top: 1vw;
+font-size: 2vw;
+}
+
+.zollo-phone-ds-phone-05-tc-inside-4-rows hr {
+opacity: 0.1;
+margin: 0vw;
+padding: 0vw;
+display: block;
+border-top: 0.2vw solid gray;
+border-left: none;
+border-right: none;
+border-bottom: none;
+}
+
+
+.zollo-phone-ds-phone-05-tc-inside-5 {
+width: 100%;
+height: 15%;
+background-color: none;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+
+.zollo-phone-ds-phone-05-tc-inside-5-center {
+
+}
+
+.zollo-phone-ds-phone-05-tc-inside-5-center a {
+border-radius: 5vw;
+font-family: "Roboto", sans-serif;
+font-weight: 100;
+padding: 2vw 6vw;
+border: 0.1vw solid var(--main-gold-color);
+color: var(--main-gold-color);
+text-decoration: none;
+font-size: 2.5vw;  
+}
+
+.zollo-phone-ds-phone-05-tc-inside-6 {
+width: 100%;
+height: 6%;
+background-color: none;
+display: flex;
+justify-content: flex-end;
+align-items: center;
+}
+
+.zollo-phone-ds-phone-05-tc-inside-6-center {
+
+}
+
+.zollo-phone-ds-phone-05-tc-inside-6-center img {
+opacity: 0.5;
+width: 3vw;
+display: block;
+margin-right: 4vw;
+}
+
+/* END PHONE TEMPLATE 05 */
+
+
+
+
+/* PHONE TEMPLATE 06 */
+
+.zollo-phone-ds-phone-06 {
+z-index: 100;
+position: absolute;
+cursor: pointer;
+width: 60vw;
+height: 120vw;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%) scale(1.2);
+background-color: none;
+}
+
+
+.zollo-phone-ds-phone-06-template {
+
+}
+
+.zollo-phone-ds-phone-06-template img {
+position: absolute;
+width: 100%;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+-webkit-filter: drop-shadow(1.6vw 1.6vw 1.6vw rgba(0,0,0,0.5));
+}
+
+.zollo-phone-ds-phone-06-template-head {
+z-index: 1;
+position:absolute;
+top: -1vw;
+left: 50%;
+transform: translateX(-50%);
+width: 30vw;
+height: 5.8vw;
+background-color: white;
+border-bottom-left-radius: 2.8vw;
+border-bottom-right-radius: 2.8vw;
+}
+
+.zollo-phone-ds-phone-06-template-content {
+width: 89%;
+height: 113vw;
+border-radius: 5vw;
+position:absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);   
+background-color: none;
+background-image: url(../img/digitalni-sluzby/pozadi-1.png);
+background-size: 100% 113vw;
+background-repeat: no-repeat;
+background-position: center center;
+}
+
+
+.zollo-phone-ds-phone-06-template-content-inside {
+position: relative;
+border-radius: none;
+width: 100%;
+height: 113vw;
+background-color: none;
+display: flex;
+flex-direction: column;    
+}
+
+.zollo-phone-ds-phone-06-tc-inside-1 {
+width: 100%;
+height: 15%;
+/*background-color: rgba(36,255,0,0.2);*/
+background-color: none;
+}
+
+.zollo-phone-ds-phone-06-tc-inside-1 p {
+text-align: left !important;
+position: relative;
+top: 6vw;
+left: 4vw;
+font-weight: bold;
+margin: 0vw;
+padding: 0vw;
+font-size: 9vw;
+font-family: "kiona";
+color: var(--main-gold-color);
+
+}
+
+.zollo-phone-ds-phone-06-tc-inside-2 {
+width: 100%;
+height: 20%;
+background-color: none;
+display: flex;
+align-items: center;
+}
+
+.zollo-phone-ds-phone-06-tc-inside-2-center {
+margin-top: -2vw;
+margin-left: 4vw;
+}
+
+.zollo-phone-ds-phone-06-tc-inside-2 h2 { 
+text-align: left;
+color: var(--main-white-color);
+margin: 0vw;
+padding: 0vw;
+font-size: 3.5vw;
+font-weight: normal;
+font-family: "Roboto", sans-serif;
+font-weight: 100;
+
+}
+
+.zollo-phone-ds-phone-06-tc-inside-2-line {
+margin-top: 2vw;
+width: 12vw;
+height: 0.5vw; 
+background-color: var(--main-gold-color); 
+}
+
+.zollo-phone-ds-phone-06-tc-inside-3 {
+width: 100%;
+height: 20%;
+background-color: none;
+position: relative;
+}
+
+.zollo-phone-ds-phone-06-tc-inside-3-center {
+
+}
+
+.zollo-phone-ds-phone-06-tc-inside-3-center img {
+width: 25vw;
+display: block;
+position: absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -20%);
+
+}
+
+.zollo-phone-ds-phone-06-tc-inside-4 {
+width: 100%;
+height: 34%;
+background-color: none;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.zollo-phone-ds-phone-06-tc-inside-4-rows {
+background-color: none;
+width: 90%;
+min-height: 5vw;
+}
+
+
+.zollo-phone-ds-phone-06-tc-inside-4-rows-item:first-child {
+border-top-left-radius: 1.5vw;
+border-top-right-radius: 1.5vw;
+}
+
+.zollo-phone-ds-phone-06-tc-inside-4-rows-item:last-child {
+border-bottom-left-radius: 1.5vw;
+border-bottom-right-radius: 1.5vw;
+border-bottom: none;
+}
+
+.zollo-phone-ds-phone-06-tc-inside-4-rows-item {
+width: 100%;
+min-height: 2.5vw;
+background-color: rgba(0,0,0,0.5);
+box-sizing: border-box;
+padding: 2vw;
+padding-left: 1.5vw; 
+}
+
+.zollo-phone-ds-phone-06-tc-inside-4-rows-item span {
+display: block;
+text-align: left;
+color: var(--main-gold-color);
+font-family: "Roboto", sans-serif;
+font-weight: normal;
+margin: 0vw;
+padding: 0vw;
+font-size: 2.5vw;
+}
+
+.zollo-phone-ds-phone-06-tc-inside-4-rows-item p {
+text-align: left;
+color: var(--main-white-color);
+font-family: "Roboto", sans-serif;
+font-weight: 300;
+margin: 0vw;
+padding-top: 1vw;
+font-size: 2vw;
+}
+
+.zollo-phone-ds-phone-06-tc-inside-4-rows hr {
+opacity: 0.1;
+margin: 0vw;
+padding: 0vw;
+display: block;
+border-top: 0.2vw solid gray;
+border-left: none;
+border-right: none;
+border-bottom: none;
+}
+
+
+.zollo-phone-ds-phone-06-tc-inside-5 {
+width: 100%;
+height: 15%;
+background-color: none;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+
+.zollo-phone-ds-phone-06-tc-inside-5-center {
+
+}
+
+.zollo-phone-ds-phone-06-tc-inside-5-center a {
+border-radius: 5vw;
+font-family: "Roboto", sans-serif;
+font-weight: 100;
+padding: 2vw 6vw;
+border: 0.1vw solid var(--main-gold-color);
+color: var(--main-gold-color);
+text-decoration: none;
+font-size: 2.5vw;  
+}
+
+.zollo-phone-ds-phone-06-tc-inside-6 {
+width: 100%;
+height: 6%;
+background-color: none;
+display: flex;
+justify-content: flex-end;
+align-items: center;
+}
+
+.zollo-phone-ds-phone-06-tc-inside-6-center {
+
+}
+
+.zollo-phone-ds-phone-06-tc-inside-6-center img {
+opacity: 0.5;
+width: 3vw;
+display: block;
+margin-right: 4vw;
+}
+
+/* END PHONE TEMPLATE 06 */
+
+
+/* END ZOLLO PHONE TEMPLATES */
+
+
+
+#zollo-phone-nasi-klienti {
+position: relative;
+width: 100%;
+min-height: 35vw;
+background-color: var(--main-white-color);      
+}
+
+.zollo-phone-nasi-klienti-content {
+width: 100%;
+min-height: 35vw;
+display: flex;
+justify-content: center;
+align-items: center;    
+flex-direction: column;
+}
+
+.zollo-phone-nasi-klienti-desc {
+margin-top: 2vw;
+}
+
+.zollo-phone-nasi-klienti-desc p {
+font-family: "Roboto", sans-serif;
+font-weight: 100;
+font-size: 7vw;
+margin: 0vw;
+padding: 0vw;
+color: black;    
+}
+
+.zollo-phone-nasi-klienti-desc strong {
+font-weight: 300;
+}
+
+.zollo-phone-nasi-klienti-grid {
+margin-top: 3vw;
+width: 100%;
+height: 15vw;
+background-color: none;  
+display: grid;
+grid-template-columns: 16vw 16vw 16vw 16vw 16vw;
+grid-gap: 0vw 3vw;  
+justify-content: center;
+margin-bottom: 2vw;
+
+}
+
+.zollo-phone-nasi-klienti-grid-item {
+background-color: none;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.zollo-phone-nasi-klienti-grid-item img {
+display: block;
+margin: 0 auto;
+width: 15vw;
+}
+
+.zollo-phone-nasi-klienti-grid-item:nth-of-type(2) img {
+display: block;
+width: 6vw;
+}
+
+#zollo-phone-kontakt {
+position: relative;
+width: 100%;
+min-height: 170vw;
+background-color: #393939;
+display: flex;
+justify-content: center;
+align-items: flex-end;
+overflow: hidden;
+}
+
+.zollo-phone-kontakt-content-wrap {
+position: relative;
+width: 95%;
+height: 150vw;
+background-image: url(../img/bg/gold-mobile.png);
+background-repeat: no-repeat;
+background-size: 100% 150vw;
+background-position: center center;
+background-color: none;
+-webkit-filter: drop-shadow(4vw 4vw 4vw rgba(0,0,0,0.5));
+overflow: hidden;
+}
+
+
+/*
+.zollo-phone-kontakt-content-wrap {
+position: relative;
+width: 100%;
+height: 130vw;
+background-color: pink;    
+}
+*/
+
+
+.zollo-phone-kontakt-content {
+position: absolute;
+left: 0vw;
+top: 4vw;
+width: 100%;
+height: 145vw;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;  
+
+}
+
+.zollo-phone-kontakt-content-item-a {
+position: absolute;
+top: 15vw;
+width: 90%;
+background-color: none;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+
+.zollo-phone-kontakt-content-item-a-content {
+position: relative;
+margin-top: 0vw;
+
+}
+
+.zollo-phone-kontakt-content-item-a p:nth-of-type(1) {
+font-weight: 300;
+position: relative;
+font-family: "Roboto", sans-serif;
+font-size: 11vw;
+margin: 0vw;
+padding: 0vw;
+display: block;
+color: var(--main-white-color);
+}
+
+
+.zollo-phone-kontakt-content-item-a p:nth-of-type(2) {
+font-weight: 400;
+text-align: center;
+position: relative;
+margin-top: 0vw;
+font-family: "Roboto", sans-serif;
+font-size: 11vw;
+padding: 0vw;
+display: block;
+color: var(--main-white-color);
+-webkit-text-stroke: 0.2vw var(--main-white-color);
+}
+
+
+#zollo-phone-ko-wrap {
+display: flex;
+flex-direction: row;
+
+}
+
+#zollo-phone-ko-wrap p {
+font-weight: 300;
+position: relative;
+font-family: "Roboto", sans-serif;
+font-size: 11vw;
+margin: 0vw;
+padding: 0vw;
+display: block;
+color: var(--main-white-color);
+}
+
+#zollo-phone-ko-wrap span {
+display: block;
+align-self: center;
+margin-left: 1.5vw;
+margin-top: 0vw;
+width: 0.4vw;
+height:10.5vw;
+background-color: var(--main-white-color);
+animation-name: zollo-phone-ko-one;
+animation-duration: 0.5s;
+animation-iteration-count: infinite;
+animation-direction: alternate;
+}
+
+
+@keyframes zollo-phone-ko-one {
+0% {opacity: 1;}
+100% {opacity: 0;}
+}
+
+
+#zollo-phone-ko-wrap2 {
+position: relative;
+display: flex;
+flex-direction: row;
+justify-content: center;
+background-color: none;
+height: 11vw;
+}
+
+#zollo-phone-ko-wrap2 p {
+font-weight: 400;
+text-align: center;
+position: relative;
+margin-top: 0vw;
+font-family: "Roboto", sans-serif;
+font-size: 11vw;
+padding: 0vw;
+display: block;
+color: var(--main-white-color);
+-webkit-text-stroke: 0.2vw var(--main-white-color);
+}
+
+#zollo-phone-ko-wrap2 span {
+display: block;
+align-self: center;
+margin-left: 1.5vw;
+margin-top: 0vw;
+width: 0.4vw;
+height:10.5vw;
+background-color: var(--main-white-color);
+animation-name: zollo-phone-ko-two;
+animation-duration: 0.5s;
+animation-iteration-count: infinite;
+animation-direction: alternate;
+}
+
+
+@keyframes zollo-phone-ko-two {
+0% {opacity: 1;}
+100% {opacity: 0;}
+}
+
+
+.zollo-phone-kontakt-content-item-a-dot {
+align-self: flex-end;
+margin-left: 2vw;
+margin-bottom: 0.5vw;
+width: 2vw;
+height: 2vw;
+background-color: var(--main-gold-color);    
+}
+
+.zollo-phone-kontakt-content-item-b {
+position: absolute;
+margin-top: 16vw;
+width: 90%;
+height: 85vw;
+background-color: none;    
+
+}
+
+
+
+/* AJAX */
+
+#zollo-kontakt-form-alert {
+position: relative;
+margin-left: 0vw;
+width: 100%;
+height: 3vw;
+background-color: none;
+margin-bottom: 0.5vw;
+
+}
+
+#zollo-kontakt-form-alert p {
+font-family: "Roboto", sans-serif !important;
+font-weight: 400 !important;
+color: #b30000 !important;
+padding-left: 0.7vw !important;
+margin: 0vw;
+line-height: 3vw !important;
+font-size: 3vw !important;
+
+}
+
+
+.zollo-kontakt-submit-overlay {
+z-index: 1002;  
+position: fixed;
+left: 0vw;
+top: 0vw;
+width: 100%;
+height: 100%;
+background-color: rgba(0,0,0,0.6);
+opacity: 0;
+visibility: hidden;
+}
+
+.zollo-kontakt-submit-overlay-anim {
+animation-name: window-alert;
+animation-duration: 0.5s;
+animation-fill-mode: forwards;
+animation-timing-function: ease-in-out;
+}
+
+
+@keyframes window-alert {
+0% {visibility: hidden; opacity: 0;}
+100% {visibility: visible; opacity: 1;}
+}
+
+.zollo-kontakt-submit-overlay-anim-rev {
+animation-name: window-alert-rev;
+animation-duration: 0.5s;
+animation-fill-mode: forwards;
+animation-timing-function: ease-in-out;
+}
+
+@keyframes window-alert-rev {
+0% {visibility: visible; opacity: 1;}
+100% {visibility: hidden; opacity: 0;}
+}
+
+
+.zollo-kontakt-submit-window {
+position: absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+width: 85vw;
+height: 45vw;
+background-color: var(--main-gold-color);
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.zollo-kontakt-submit-window-close {
+cursor: pointer;
+position: absolute;
+right: 0vw;
+top: 0vw;
+width: 8vw;
+height: 8.5vw;
+background-color: none;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+
+
+.zollo-kontakt-submit-window-close img {
+display: block;
+width: 3.5vw;
+}
+
+.zollo-kontakt-submit-window-close-a, .zollo-kontakt-submit-window-close-b {
+
+width: 2.5vw;
+height: 0.2vw;
+border-radius: 0.2vw;
+margin: 0.3vw 0vw;
+background-color: black;
+}
+
+
+.zollo-kontakt-submit-window-close-a {
+transform: rotate(-45deg) translate(0.9vw, -1vw) scale(0.8); 
+}
+
+
+.zollo-kontakt-submit-window-close-b {
+transform: rotate(45deg) translate(-1.5vw, -1.5vw) scale(0.8);
+}
+
+/*
+.zollo-kontakt-submit-window-close span {
+font-size: 2vw;
+}
+*/
+
+.zollo-kontakt-submit-window p {
+text-align: center;
+color: black;
+font-size: 4.2vw;
+font-family: "Roboto", sans-serif;
+font-weight: 100;
+}
+
+
+
+
+/* END AJAX */
+
+.zollo-kontakt-form-wrap {
+
+position: absolute;
+z-index: 1000;
+top: 0vw;
+left: 50%;
+transform: translateX(-50%);
+width: 80%;
+background-color: none;
+
+}
+
+
+#zollo-phone-kontakt-form {
+
+}
+
+.zollo-kontakt-form-wrap form {
+
+margin: 0vw;
+padding: 0vw;
+display: block;
+}
+
+#zollo-phone-kontakt-form input {
+font-weight: 100;
+position: relative;
+font-style: italic;
+font-size: 3.2vw;
+color: #e3e3e3;
+font-family: "Roboto", sans-serif;
+width: 100%;
+display: block;
+margin: 0vw;
+padding: 0vw;
+height: 7vw;
+padding-left: 2vw;
+-moz-box-sizing:border-box;
+-webkit-box-sizing:border-box;
+box-sizing:border-box;
+margin-bottom: 3vw;
+outline: none;
+background: none;
+border: none;
+border-bottom: 0.1vw solid #e3e3e3;
+}
+
+#zollo-phone-kontakt-form textarea {
+font-weight: 100;
+position: relative;
+font-style: italic;
+font-size: 3.2vw;
+color: #e3e3e3;
+font-family: "Roboto", sans-serif;
+width: 100%;
+display: block;
+margin: 0vw;
+padding: 0vw;
+height: 7vw;
+padding-left: 2vw;
+-moz-box-sizing:border-box;
+-webkit-box-sizing:border-box;
+box-sizing:border-box;
+margin-bottom: 3vw;
+outline: none;
+background: none;
+border: none;
+border-bottom: 0.1vw solid #e3e3e3;
+transition: 0.3s ease-in-out;
+padding-top: 1vw;    
+resize: none;
+}
+
+
+
+
+#zollo-phone-kontakt-form input::placeholder {
+font-weight: 100;
+font-family: "Roboto", sans-serif;
+color: #e3e3e3;
+}
+
+#zollo-phone-kontakt-form textarea::placeholder {
+font-weight: 100;
+font-family: "Roboto", sans-serif;
+color: #e3e3e3;
+}
+
+/*
+#zollo-phone-kontakt-form textarea {
+
+}
+*/
+
+#zollo-phone-kontakt-form button {
+cursor: pointer;
+position: relative;
+z-index: 1000;
+left: 50%;
+transform: translate(-50%);
+outline: none;
+font-weight: 300;
+font-family: "Roboto", sans-serif;
+font-size: 3.3vw;
+font-weight: 300;
+margin-top: 12vw;
+cursor: pointer;
+background-color: var(--main-gold-color);
+width: 70%;
+height: 8vw;
+border-radius: 0.6vw;
+color: black;
+border: none;
+text-align: center;
+}
+
+#zollo-phone-kontakt-form input[type=submit] {
+font-size: 1.4vw;
+font-weight: 300;
+margin-top: 4vw;
+cursor: pointer;
+background-color: rgba(255,255,225,0.5);
+width: 20vw;
+height: 3.3vw;
+border-radius: 0.6vw;
+float: right;
+color: black;
+border: none;
+text-align: center;
+}
+
+
+.zollo-phone-kontakt-content-item-c {
+transition: 0.3s ease-in-out;
+position: absolute;
+top: 115vw;
+width: 90%;
+height: 10%;
+background-color: none;  
+display: grid;
+grid-template-columns: 35vw 35vw;
+grid-gap: 0vw 2vw;
+justify-content: center;
+align-items: center;
+}
+
+.zollo-phone-kontakt-content-item-c-a {
+background-color: none;
+height: 8vw;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.zollo-phone-kontakt-content-item-c-a p {
+font-family: "Roboto", sans-serif;
+font-size: 3vw;
+font-weight: 100;
+color: var(--main-white-color);
+}
+
+.zollo-phone-kontakt-content-item-c-a span {
+color: var(--main-white-color);
+position: relative;
+font-size: 5vw;
+padding-right: 2vw; 
+}
+
+.zollo-phone-kontakt-content-item-d {
+transition: 0.3s ease-in-out;
+position: absolute;
+top: 123vw;
+transform: translateY(0vw);
+width: 90%;
+height: 10%;
+background-color: none;
+display: flex;
+justify-content: center;
+align-items: flex-end;
+}
+
+.zollo-phone-kontakt-content-item-d p {
+margin: 0vw;
+padding: 0vw;
+text-align: center;
+font-family: "Roboto", sans-serif;
+font-size: 2.5vw;
+font-weight: 300;
+color: #6a6666;
+}
+
+.zollo-phone-kontakt-content-item-d a {
+color: #6a6666;
+}
+
+.zollo-phone-kontakt-content-item-f {
+position: relative;
+width: 90%;
+height: 5%;
+background-color: pink;     
+}
+
+
+
+
+
+/* END ZOLLO PHONE PORTFOLIO var(--main-gold-color); */
+
+
+}

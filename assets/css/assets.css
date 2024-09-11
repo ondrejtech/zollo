@@ -1,0 +1,1236 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap');
+
+@font-face {
+   font-family: "kiona";
+   src: url(../font/kiona.ttf);
+}
+
+@font-face {
+   font-family: "sg-medium";
+   src: url(../font/sg-medium.ttf);
+}
+
+@font-face {
+   font-family: "sg-regular";
+   src: url(../font/sg-regular.ttf);
+}
+
+@font-face {
+   font-family: "sg-light";
+   src: url(../font/sg-light.ttf);
+}
+
+
+html, body {
+margin: 0vw;
+padding: 0vw;
+width: 100%;
+/*
+background-color: #000101;
+*/
+font-family: "Roboto", sans-serif;
+
+}
+
+body {
+overflow-x: hidden;
+}
+
+
+:root {
+
+--main-w-color: #E3E3E3;
+
+}
+
+
+::selection {
+background-color: #a69672; 
+color: #e6e6e6;  
+}
+
+
+/* Chrome, Safari */
+::-webkit-selection {
+background-color: #a69672;
+color: #e6e6e6;  
+}
+
+
+/* Mozzila */
+::-moz-selection {
+background-color: #a69672;
+color: #e6e6e6;  
+}
+
+/* Opera */
+::-o-selection {
+background-color: #a69672;
+color: #e6e6e6;     
+}
+
+/* IE */
+::ms-selection {
+background-color: #a69672;
+color: #e6e6e6;  
+}
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 0.5vw;
+    background-color: #e3e3e3;
+
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    /*
+    box-shadow: inset 0 0 5px grey; 
+    z-index: 2;
+    */
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #1d1d1d;
+    border-radius: 2vw;
+    z-index: 2;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #928864; 
+    z-index: 2;
+    transition: 0.3s;
+}
+
+
+#zollo-error-bg {
+position: fixed;
+width: 100%;
+height: 100%;
+background-image: url(../img/bg/error.png);
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+background-attachment: fixed;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+/*
+
+initial: the default setting of the property that does not set a blend mode.
+inherit: an element will inherit the blend mode from its parent element.
+unset: removes the current blend mode from an element.
+<blend-mode>: this is the attribute of one of the blend modes beneath:
+normal: this attribute applies no blending whatsoever.
+multiply: the element is multiplied by the background and replaces the background color. The resulting color is always as dark as the background.
+screen: multiplies the background and the content then complements the result. This will result in content which is brighter than the background-color.
+overlay: multiplies or screens the content depending on the background color. This is the inverse of the hard-light blend mode.
+darken: the background is replaced with the content where the content is darker, otherwise it is left as it was.
+lighten: the background is replaced with the content where the content is lighter.
+color-dodge: this attribute brightens the background color to reflect the color of the content.
+color-burn: this darkens the background to reflect the content’s natural color.
+hard-light: depending on the color of the content this attribute will screen or multiply it.
+soft-light: depending on the color of the content this will darken or lighten it.
+difference: this subtracts the darker of the two colors from the lightest color.
+exclusion: similar to difference but with lower contrast.
+hue: creates a color with the hue of the content combined with the saturation and luminosity of the background.
+saturation: creates a color with saturation of the content combined with the hue and luminosity of the background.
+color: creates a color with the hue and saturation of the content and the luminosity of the background.
+luminosity
+
+
+*/
+
+.zollo-error-bg-block-1-mobile {
+display: none;   
+}
+
+.zollo-error-bg-block-1 {
+transform: scale(0.9);
+width: 65vw;
+height: 30vw;
+background-color: none;
+border: none;
+display: flex;
+flex-direction: column;
+}
+
+
+.zollo-error-bg-block-1-border {
+mix-blend-mode: soft-light;
+width: 65vw;
+height: 30vw;
+border: 0.8vw solid white;
+position: absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%) scale(0.9);
+}
+
+.zollo-error-bg-block-1-border {
+
+}
+
+.zollo-error-bg-block-1-a {
+z-index: 10;
+opacity: 0.3;
+position: relative;
+width: 100%;
+height: 15vw;
+display: flex;
+justify-content: center;
+align-content: center;
+}
+
+
+.zollo-error-bg-block-1-a h1 {
+color: white;
+margin: 0vw;
+padding: 0vw;
+font-size: 9vw;
+font-family: "Roboto", sans-serif;
+font-weight: 800;
+letter-spacing: 2.5vw;
+align-self: flex-end;
+
+}
+
+.zollo-error-bg-block-1-b {
+opacity: 0.3;
+position: relative;
+width: 100%;
+height: 5vw;
+display: flex;
+justify-content: center;
+align-content: center;
+}
+
+.zollo-error-bg-block-1-b p {
+color: white;
+margin: 0vw;
+padding: 0vw;
+font-size: 1.2vw;
+font-family: "Roboto", sans-serif;
+font-weight: 100;
+font-style: italic;
+align-self: center;
+}
+
+.zollo-error-bg-block-1-c {
+opacity: 0.3;
+position: relative;
+width: 100%;
+height: 8vw;
+display: flex;
+justify-content: center;
+align-content: center;
+}
+
+.zollo-error-bg-block-1-c a {
+font-size: 1.2vw;
+color: white;
+align-self: center;
+font-family: "Roboto", sans-serif;
+font-weight: 100;
+font-style: italic;
+text-decoration: none;
+background-color: none;
+padding: 0.8vw 8vw;
+border: 0.15vw solid white;
+border-radius: 20vw;
+}
+
+.zollo-error-bg-block-1-d {
+position: absolute;
+left: 50%;
+top: 50%;
+mix-blend-mode: soft-light;
+transform: translate(-135%, -82%) rotate(90deg);
+}
+
+.zollo-error-bg-block-1-d span {
+color: white;
+margin: 0vw;
+padding: 0vw;
+font-size: 18vw;
+font-family: "kiona";
+font-weight: normal;
+}
+
+
+/* END ZOLLO PORTFOLIO */
+
+/* UNSUBSCRIBE */
+
+.zollo-unsubs-login-wrap {
+position: absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%,-50%);
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.zollo-unsubs-login-content {
+position: relative;
+display: block;
+width: 35vw;
+height: 35vw;
+background-color: #161616;  
+box-sizing: border-box;
+padding: 3vw;
+box-shadow: 0px 0px 2.5vw 0px rgba(0,0,0,0.3);
+}
+
+.zollo-unsubs-login-content form {
+display: block;
+margin: 0vw;
+padding: 0vw;
+font-family: "Roboto", sans-serif;
+
+}
+
+.zollo-unsubs-login-content label {
+color: white;
+font-family: "Roboto", sans-serif;
+font-weight: 100;
+font-size: 1.1vw;
+display: block;
+margin: 0vw;
+padding: 0vw;
+padding-bottom: 0.5vw;
+}
+
+.zollo-unsubs-login-content img {
+opacity: 0.7;
+display: block;
+position: relative;
+left: 50%;
+transform: translateX(-50%);
+margin: 0vw;
+padding: 0vw;
+padding-bottom: 1.5vw;
+width: 5vw;
+}
+
+.zollo-unsubs-login-content p {
+text-align: center;
+color: rgba(255,255,255,0.7);
+font-size: 1.5vw;
+font-weight: 200;
+}
+
+.zollo-unsubs-complete {
+position: absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);  
+}
+
+.zollo-unsubs-complete p {
+font-size: 3vw;
+font-weight: 200;
+color: rgba(255,255,255,0.7);
+}
+
+
+
+.zollo-unsubs-query {
+margin-top: 2vw;
+margin-bottom: 2.5vw; 
+}
+
+.zollo-unsubs-query p {
+text-align: center;
+color: rgba(255,255,255,0.7);
+font-size: 1.2vw;
+font-weight: 200;
+}
+
+
+/* CHECKBOX */
+
+.zollo-unsubs-query-item {
+display: flex;
+margin-bottom: 1vw;
+}
+
+.zollo-unsubs-query-item p {
+display: block;
+margin: 0vw;
+padding: 0vw;
+margin-left: 2.5vw;
+font-size: 1.1vw;
+text-align: left;
+}
+
+.container {
+display: block;
+position: relative;
+cursor: pointer;
+font-size: 1vw;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+
+
+.container input {
+position: absolute;
+opacity: 0;
+cursor: pointer;
+}
+
+
+.checkmark {
+position: absolute;
+top: 0;
+left: 0;
+height: 1.2vw;
+width: 1.2vw;
+background-color: none;
+border-radius: 50%;
+border: 0.1vw solid white;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+background-color: none;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+background-color: none;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+font-family: "FontAwesome";
+content: "\f111";
+position: absolute;
+display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+font-size: 0.6vw;
+ /* 
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+width: 0.7vw;
+height: 0.7vw;
+border-radius: 50%;
+
+background: white;
+*/
+}
+
+
+/* END CHECKBOX */
+
+
+.zollo-unsubs-login-content-id {
+position: relative;
+}
+
+.zollo-unsubs-login-content-id-input {
+position: relative;
+}
+
+.zollo-unsubs-login-content-id span {
+position: absolute;
+background-color: none;
+width: 3vw;
+height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+color:rgba(255,255,255,0.7);
+font-size: 1.1vw;
+
+}
+
+.zollo-unsubs-login-content input[type="text"] {
+color: rgba(255,255,255,0.7);
+font-family: "Roboto", sans-serif;
+font-weight: 300;
+display: block;
+margin: 0vw;
+padding: 0vw;
+width: 100%;
+background-color: rgba(255,255,255,0);
+box-sizing: border-box;
+padding-top: 0.6vw;
+padding-bottom: 0.6vw;
+padding-left: 3.5vw;
+margin-bottom: 1vw;
+outline: none;
+border-right: none;
+border-left: none;
+border-top: none;
+border-bottom: 0.1vw solid rgba(255,255,255,0.7);
+font-size: 1.1vw;
+}
+
+.zollo-unsubs-login-content-password {
+position: relative;
+}
+
+.zollo-unsubs-login-content-password-input {
+position: relative;
+}
+
+.zollo-unsubs-login-content-password span {
+position: absolute;
+background-color: none;
+width: 3vw;
+height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+color:rgba(255,255,255,0.7);
+font-size: 1.1vw;
+
+}
+
+.zollo-unsubs-login-content input[type="password"] {
+color: rgba(255,255,255,0.7);
+font-family: "Roboto", sans-serif;
+font-weight: 300;
+font-size: 1.1vw;
+display: block;
+margin: 0vw;
+padding: 0vw;
+width: 100%;
+background-color: rgba(255,255,255,0);
+box-sizing: border-box;
+padding-top: 0.6vw;
+padding-bottom: 0.6vw;
+padding-left: 3.5vw;
+margin-bottom: 3vw;
+outline: none;
+border-right: none;
+border-left: none;
+border-top: none;
+border-bottom: 0.1vw solid rgba(255,255,255,0.7);
+}
+
+
+.zollo-unsubs-login-content input[type="submit"] {
+margin-top: 1.5vw;
+cursor: pointer;
+font-family: "Roboto", sans-serif;
+font-weight: 300;
+font-size: 1.1vw;
+display: block;
+margin: 0vw;
+padding: 0vw;
+width: 100%;
+box-sizing: border-box;
+padding-top: 0.7vw;
+padding-bottom: 0.7vw;
+margin-bottom: 1vw;
+outline: none;
+border: 0.1vw solid rgba(255,255,255,0.7);
+border-radius: 0.5vw;
+background-color: rgba(0,0,0,0);
+color: rgba(255,255,255,0.7);
+transition: 0.3s ease-in-out;
+
+}
+
+.zollo-unsubs-login-content input[type="submit"]:hover {
+border: 0.1vw solid #A3946E; 
+background-color: #A3946E; 
+}
+
+/* END UNSUBSCRIBE */
+
+
+/*
+
+@media only screen and (min-width: 0px) and (max-width: 768px) {
+
+.zollo-error-bg-block-1 {
+position: relative;
+z-index: 1;
+transform: scale(0.9);
+width: 90%;
+height: 115vw;
+background-color: none;
+border: none;
+display: flex;
+justify-content: center;
+padding-bottom: 0vw;
+align-items: flex-start;
+flex-direction: column;
+}
+
+.zollo-error-bg-block-1-border {
+mix-blend-mode: soft-light;
+width: 90%;
+height: 115vw;
+border: 2vw solid white;
+position: absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%) scale(0.9);
+}
+
+.zollo-error-bg-block-1-mobile {
+z-index: 100;
+opacity: 0.3;
+top: -5vw;
+position: relative;
+width: 100%;
+height: 35vw;
+display: flex;
+justify-content: center;
+align-content: center;
+background-color: none;
+mix-blend-mode: soft-light;
+padding-bottom: 8vw;
+}
+
+
+.zollo-error-bg-block-1-mobile span {
+color: white;
+margin: 0vw;
+padding: 0vw;
+font-size: 62vw;
+font-family: "kiona";
+font-weight: normal;
+letter-spacing:-3vw;
+align-self: center;
+
+}
+
+.zollo-error-bg-block-1-a {
+margin-top: 0vw;
+position: relative;
+width: 100%;
+height: 20vw;
+display: flex;
+justify-content: center;
+align-content: flex-start;
+background-color: none;
+padding-bottom: 5vw;
+}
+
+
+.zollo-error-bg-block-1-a h1 {
+color: white;
+margin: 0vw;
+padding: 0vw;
+font-size: 20vw;
+font-family: "Roboto", sans-serif;
+font-weight: 800;
+letter-spacing: 2.5vw;
+align-self: center;
+
+}
+
+.zollo-error-bg-block-1-b {
+opacity: 0.7;
+position: relative;
+width: 100%;
+height: 10vw;
+display: flex;
+justify-content: center;
+align-content: center;
+background-color: none;
+}
+
+.zollo-error-bg-block-1-b p {
+color: white;
+margin: 0vw;
+padding: 0vw;
+font-size: 3vw;
+font-family: "Roboto", sans-serif;
+font-weight: 100;
+font-style: italic;
+align-self: center;
+}
+
+.zollo-error-bg-block-1-c {
+opacity: 0.7;
+position: relative;
+width: 100%;
+height: 15vw;
+display: flex;
+justify-content: center;
+align-content: center;
+background-color: none;
+}
+
+.zollo-error-bg-block-1-c a {
+cursor: pointer;
+font-size: 3vw;
+color: white;
+align-self: center;
+font-family: "Roboto", sans-serif;
+font-weight: 100;
+font-style: italic;
+text-decoration: none;
+background-color: none;
+padding: 2vw 20vw;
+border: 0.15vw solid white;
+border-radius: 20vw;
+}
+
+.zollo-error-bg-block-1-d {
+display: none;
+position: absolute;
+left: 50%;
+top: 5vw;
+mix-blend-mode: soft-light;
+transform: translateX(-50%) rotate(0deg);
+}
+
+.zollo-error-bg-block-1-d span {
+color: white;
+margin: 0vw;
+padding: 0vw;
+font-size: 55vw;
+font-family: "Roboto", sans-serif;
+font-weight: 300;
+}
+
+
+
+}
+
+#op-bg {
+position: fixed;
+width: 100%;
+height: 100vh;
+background-image: url(../img/bg/kontakt-pozadi.png);
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+background-attachment: fixed;
+}
+
+
+
+#op-wrap {
+position: relative;
+padding-top: 10vw;
+display: flex;
+justify-content: center;
+padding-bottom: 10vw;
+color: var(--main-w-color);
+}
+
+#op {
+width: 75%;
+}
+
+#op h2 {
+font-size: 1.5vw;
+margin-bottom: 2vw;
+}
+
+
+#op p {
+font-size: 1.2vw;
+font-weight: 100;
+margin-bottom: 2vw;
+text-align: justify;
+text-justify: distribute;
+text-align-last: left;
+word-break: break-all;
+}
+
+
+ul#op-11 li {
+font-size: 1.2vw;
+font-weight: 100;
+margin-bottom: 1vw;
+text-align: justify;
+text-justify: distribute;
+text-align-last: left;
+word-break: break-all;
+
+}
+
+ul#op-2-4 {
+
+list-style-type: decimal;
+
+}
+
+ul#op-2-4 li {
+font-size: 1.2vw;
+font-weight: 100;
+margin-bottom: 1vw;
+text-align: justify;
+text-justify: distribute;
+text-align-last: left;
+word-break: break-all;
+
+}
+
+ul#op-2-9 {
+
+list-style-type: decimal;
+
+}
+
+ul#op-2-9 li {
+font-size: 1.2vw;
+font-weight: 100;
+margin-bottom: 1vw;
+text-align: justify;
+text-justify: distribute;
+text-align-last: left;
+word-break: break-all;
+
+}
+
+
+a {
+
+color: var(--main-w-color);
+
+}
+
+}
+
+*/
+
+
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+
+.zollo-unsubs-complete p {
+white-space: nowrap;
+font-size: 6vw;
+font-weight: 200;
+color: rgba(255,255,255,0.7);
+}
+
+/* UNSUBSCRIBE */
+
+.zollo-unsubs-login-wrap {
+position: absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%,-50%);
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.zollo-unsubs-login-content {
+position: relative;
+display: block;
+width: 90vw;
+height: 100vw;
+background-color: #161616;  
+box-sizing: border-box;
+padding: 5vw;
+box-shadow: 0px 0px 2.5vw 0px rgba(0,0,0,0.3);
+}
+
+.zollo-unsubs-login-content form {
+display: block;
+margin: 0vw;
+padding: 0vw;
+font-family: "Roboto", sans-serif;
+
+}
+
+.zollo-unsubs-login-content label {
+color: white;
+font-family: "Roboto", sans-serif;
+font-weight: 100;
+font-size: 1.1vw;
+display: block;
+margin: 0vw;
+padding: 0vw;
+padding-bottom: 0.5vw;
+}
+
+.zollo-unsubs-login-content img {
+opacity: 0.7;
+display: block;
+position: relative;
+left: 50%;
+transform: translateX(-50%);
+margin: 0vw;
+padding: 0vw;
+padding-bottom: 3vw;
+width: 15vw;
+}
+
+.zollo-unsubs-login-content p {
+text-align: center;
+color: rgba(255,255,255,0.7);
+font-size: 4vw;
+font-weight: 200;
+}
+
+.zollo-unsubs-questionnaire p {
+text-align: center;
+color: rgba(255,255,255,0.7);
+font-size: 3vw;
+font-weight: 200;
+}
+
+.zollo-unsubs-login-content-id {
+position: relative;
+}
+
+.zollo-unsubs-login-content-id-input {
+position: relative;
+}
+
+.zollo-unsubs-login-content-id span {
+position: absolute;
+background-color: none;
+width: 3vw;
+height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+color:rgba(255,255,255,0.7);
+font-size: 1.1vw;
+
+}
+
+.zollo-unsubs-login-content input[type="text"] {
+color: rgba(255,255,255,0.7);
+font-family: "Roboto", sans-serif;
+font-weight: 300;
+display: block;
+margin: 0vw;
+padding: 0vw;
+width: 100%;
+background-color: rgba(255,255,255,0);
+box-sizing: border-box;
+padding-top: 0.6vw;
+padding-bottom: 0.6vw;
+padding-left: 3.5vw;
+margin-bottom: 1vw;
+outline: none;
+border-right: none;
+border-left: none;
+border-top: none;
+border-bottom: 0.1vw solid rgba(255,255,255,0.7);
+font-size: 1.1vw;
+}
+
+.zollo-unsubs-login-content-password {
+position: relative;
+}
+
+.zollo-unsubs-login-content-password-input {
+position: relative;
+}
+
+.zollo-unsubs-login-content-password span {
+position: absolute;
+background-color: none;
+width: 3vw;
+height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+color:rgba(255,255,255,0.7);
+font-size: 1.1vw;
+
+}
+
+.zollo-unsubs-login-content input[type="password"] {
+color: rgba(255,255,255,0.7);
+font-family: "Roboto", sans-serif;
+font-weight: 300;
+font-size: 1.1vw;
+display: block;
+margin: 0vw;
+padding: 0vw;
+width: 100%;
+background-color: rgba(255,255,255,0);
+box-sizing: border-box;
+padding-top: 0.6vw;
+padding-bottom: 0.6vw;
+padding-left: 3.5vw;
+margin-bottom: 3vw;
+outline: none;
+border-right: none;
+border-left: none;
+border-top: none;
+border-bottom: 0.1vw solid rgba(255,255,255,0.7);
+}
+
+
+.zollo-unsubs-login-content input[type="submit"] {
+margin-top: 4vw;
+cursor: pointer;
+font-family: "Roboto", sans-serif;
+font-weight: 300;
+font-size: 3.5vw;
+display: block;
+margin: 0vw;
+padding: 0vw;
+width: 100%;
+box-sizing: border-box;
+padding-top: 2vw;
+padding-bottom: 2vw;
+margin-bottom: 1vw;
+outline: none;
+border: 0.1vw solid rgba(255,255,255,0.7);
+border-radius: 0.5vw;
+background-color: rgba(0,0,0,0);
+color: rgba(255,255,255,0.7);
+transition: 0.3s ease-in-out;
+
+}
+
+.zollo-unsubs-login-content input[type="submit"]:hover {
+border: 0.1vw solid #A3946E; 
+background-color: #A3946E; 
+}
+
+
+.zollo-unsubs-query {
+margin-top: 6vw;
+margin-bottom: 8vw; 
+}
+
+.zollo-unsubs-query p {
+text-align: center;
+color: rgba(255,255,255,0.7);
+font-size: 4vw;
+font-weight: 200;
+}
+
+
+/* CHECKBOX */
+
+.zollo-unsubs-query-item {
+display: flex;
+margin-bottom: 5vw;
+}
+
+
+
+.zollo-unsubs-query-item p {
+display: block;
+margin: 0vw;
+padding: 0vw;
+margin-left: 8vw;
+font-size: 3.2vw;
+text-align: left;
+}
+
+.container {
+display: block;
+position: relative;
+cursor: pointer;
+font-size: 1vw;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+
+
+.container input {
+position: absolute;
+opacity: 0;
+cursor: pointer;
+}
+
+
+.checkmark {
+position: absolute;
+top: 0;
+left: 0;
+height: 4vw;
+width: 4vw;
+background-color: none;
+border-radius: 50%;
+border: 0.1vw solid white;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+background-color: none;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+background-color: none;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+font-family: "FontAwesome";
+content: "\f111";
+position: absolute;
+display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+font-size: 2.5vw;
+ /* 
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+width: 0.7vw;
+height: 0.7vw;
+border-radius: 50%;
+
+background: white;
+*/
+}
+
+
+/* END CHECKBOX */
+
+
+
+
+
+/* END UNSUBSCRIBE */
+
+
+#op {
+width: 90%;
+}
+
+#op h2 {
+font-size: 4vw;
+margin-bottom: 5vw;
+}
+
+
+#op p {
+font-size: 3vw;
+font-weight: 100;
+margin-bottom: 4vw;
+}
+
+
+ul#op-11 li {
+font-size: 3vw;
+font-weight: 100;
+margin-bottom: 4vw;
+
+}
+
+ul#op-2-4 {
+
+list-style-type: decimal;
+
+}
+
+ul#op-2-4 li {
+font-size: 3vw;
+font-weight: 100;
+margin-bottom: 4vw;
+
+}
+
+ul#op-2-9 {
+
+list-style-type: decimal;
+
+}
+
+ul#op-2-9 li {
+font-size: 3vw;
+font-weight: 100;
+margin-bottom: 4vw;
+
+}
+
+
+
+}
+
+
+
+
+
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+#op {
+width: 90%;
+}
+
+#op h2 {
+font-size: 3vw;
+margin-bottom: 5vw;
+}
+
+
+#op p {
+font-size: 2vw;
+font-weight: 100;
+margin-bottom: 4vw;
+}
+
+
+ul#op-11 li {
+font-size: 2vw;
+font-weight: 100;
+margin-bottom: 4vw;
+
+}
+
+ul#op-2-4 {
+
+list-style-type: decimal;
+
+}
+
+ul#op-2-4 li {
+font-size: 2vw;
+font-weight: 100;
+margin-bottom: 4vw;
+
+}
+
+ul#op-2-9 {
+
+list-style-type: decimal;
+
+}
+
+ul#op-2-9 li {
+font-size: 2vw;
+font-weight: 100;
+margin-bottom: 4vw;
+
+}
+
+
+}
